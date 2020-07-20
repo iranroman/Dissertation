@@ -200,20 +200,135 @@ Notably, we used the same model across three different experiments that simulate
 
 \subsubsection{Theoretical background}
 
+Negative phase relationships between two systems, such as anticipation, have been observed in the behaviors of coupled dynamical systems like external-cavity diode lasers \cite{ikeda1980optical} and FitzHugh–Nagumo systems \cite{toral2003characterization}. The following equations by Voss \cite{voss2000anticipating, boccaletti2001space} and Ciszak et al. \cite{ciszak2004dynamical} express the general framework of an anticipatory dynamical system with delayed feedback: 
 
+\begin{equation}
+\dot{x}=h(x) \label{eq:2.2}
+\end{equation}
 
+\begin{equation}
+\dot{y}=g(y)+h(x-y_\tau) \label{eq:2.3}
+\end{equation}
+
+Eq \eqref{eq:2.2} describes the stimulus $x$, which has dynamics defined by the function $h$. Eq \eqref{eq:2.3} describes a system y with dynamics defined by the function $g$. In Eq \eqref{eq:2.3}, the subscript $\tau$ indicates delayed behavior of the system $y$. This $y_\tau$ term is referred to as delay-coupling \cite{boccaletti2001space, stepp2015muddle}. A negative phase relationship between $y$ and $x$ is observed when $y$ receives $x$ and its own delayed activity $y_\tau$ as inputs, as described in Eq \eqref{eq:2.3}. Importantly, if $y_\tau$ is removed from these equations, the anticipatory behavior of $y$ in relationship to $x$ is no longer observed \cite{stepp2015muddle}.
+
+Because the SAPPA model simulates periodic synchronization, we used a canonical Hopf oscillator model that allows for synchronization with periodic external stimuli \cite{large2010canonical}. In contrast to the original model described by Large and colleagues \cite{large2010canonical}, the SAPPA model does not consist of a network of oscillators, but a single oscillator shown in Eq \eqref{eq:2.4}. 
 
 \begin{equation}
 \frac{1}{f}\dot{z} = z\bigg(\alpha + i2\pi + \beta_1|z|^2 + \frac{\epsilon\beta_2|z|^4}{1-\epsilon|z|^2}\bigg) + F \label{eq:2.4}
 \end{equation}
 
+In Eq \eqref{eq:2.4}, $z$ is the state of the oscillator, and $\alpha$, $\beta_1$ and $\beta_2$ are parameters that control the dynamics of the oscillator while $f$ determines the frequency of oscillation. $\epsilon$ is a parameter that controls the degree of higher-order nonlinear activity in the oscillator and $F$ is a stimulus. These dynamics allow a single oscillator to show stable oscillatory activity, even after it is no longer being stimulated, hence showing "memory" \cite{kim2015signal}. Finally, similar to other strong anticipation models, this model can explain behaviors observed in non-biological systems like Wilson-Cowan networks \cite{large2010canonical}, musical pitch recognition \cite{large2010dynamical}, and beat tracking \cite{large2015neural}.
+
+\subsubsection{The SAPPA model}
+
+Eq \eqref{eq:2.5} shows our model, which is the Hopf oscillator in Eq \eqref{eq:2.4} with $\beta_1 = \beta$, $\beta_2=0$, $\epsilon=0$, and an additional delayed feedback term. 
+
 \begin{equation}
 \frac{1}{f}\dot{z} = z(\alpha + i2\pi + \beta_1|z|^2) + F - \frac{D}{f}z(t-\tau) \label{eq:2.5}
+\end{equation}
+
+Eq \eqref{eq:2.5} in all our simulations has $\alpha=1$ and $\beta=-1$ to achieve limit cycle behavior with periodic, unit-magnitude stable and perpetual activity when $F = 0$ and $D = 0$. The oscillator has a fixed frequency determined by the parameter $f$ (in Hz). The computations by this oscillator are neuroscientifically inspired. It receives an input $F$, thus encoding and perceiving an external stimulus \cite{large2015neural}. It also receives its own delayed activity with amplitude $D$ and a delay of $\tau$ seconds, simulating the delayed communication in the nervous system between basal-ganglia, cerebellum, premotor cortices, motor cortices, and peripheral muscles at extremities and effectors (e.g., fingers), which are inherent in the perception-action cycles \cite{aschersleben1995synchronizing, prinz1992don}. We expect the delayed $z$ feedback to result in a negative phase relationship between $z$ and an external stimulus. In the SAPPA model, summarized by Eq \eqref{eq:2.5}, we vary the amplitude of the $D$ parameter, while $\alpha$ and $\beta$ always have values of $1$ and $-1$, respectively. The value of the variable $f$ is selected to match the frequency $f_s$ of a periodic external stimulus ($f = f_s$). Because $z$ is always unit amplitude, the effect of the delayed recurrent feedback is reduced as $D$ shrinks.
+
+The input $F$ is a sinusoid with a constant frequency $f_s$. Further, if the SAPPA model is to consider its own behavioral outcome as input (e.g., hearing and feeling one’s own tapping feedback), the $z$ activity may be added to the input. Hence, the input $F$ may be: 
+
+\begin{equation}
+F = \exp(i2\pi f_s t) \label{eq:2.6}
 \end{equation}
 
 \begin{equation}
 F = \frac{\exp(i2\pi f_s t)+Az}{|\exp(i2\pi f_s t)+Az|} \label{eq:2.7}
 \end{equation}
+
+\begin{equation}
+F = Az \label{eq:2.8}
+\end{equation}
+
+In Eqs \eqref{eq:2.6} and \eqref{eq:2.7} $f_s$ is the constant frequency of the external sinusoid. Unless otherwise noted, $f_s$ and $f$ are the same value ($f_s = f$). Eq \eqref{eq:2.7} normalizes the linear combination of the external sinusoid $\exp(i2\pi f_s t)$ and $Az$, consistent with behavioral observations of stimulus encoding in synchronization tasks, where changing the amplitude of the stimulus does not affect synchronization \cite{repp2008metrical}.
+
+\subsection{Parameter analysis}
+
+Eq \eqref{eq:2.5} describes $z$'s derivative over time as the linear combination of three terms: the oscillator's current state $z$, a stimulus $F$ (see Eqs \eqref{eq:2.6}, \eqref{eq:2.7}, and \eqref{eq:2.8} for the different possibilities), and the delayed recurrent feedback $z(t - \tau)$. Previous studies have investigated how $z$ synchronizes with a periodic stimulus \cite{kim2015signal, large2008resonating}. For this reason, our parameter analysis focuses on how the time length $\tau$ and amplitude of the delayed recurrent feedback $z(t - \tau)$ affect the anticipation of the SAPPA model.
+
+Throughout this paper, we fixed the parameters $\alpha = 1$ and $\beta = -1$ so that $z$ shows unit-magnitude behavior when $F = 0$ and $D = 0$. When only $D = 0$, $z$ and the external stimulus $F$ have the same frequency and phase, so anticipation is absent (see Fig \ref{f2_6}), independent of which version of $F$ is used (remember Eqs \eqref{eq:2.6}, \eqref{eq:2.7} or \eqref{eq:2.8} are the three possible version of $F$). The other parameter in Eq \eqref{eq:2.5} that can be varied is $f$, but since it is only a scale factor that affects the cycling rate of $z$, its effects will be studied later in Experiment 1. In cases when $F = \exp(i2\pi f_s t)−Az$, the magnitude of $A$ is another term that can be varied. Hence, the only other terms in Eq \eqref{eq:2.4} that can be varied are $D$, and $\tau$.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=0.8\textwidth]{figures/fig2_6.png}
+    \caption[Analysis of the effect that different parameters in the SAPPA model have on its anticipation tendency]{\textbf{Analysis of the effect that different parameters in the SAPPA model have on its anticipation tendency.} (A) Illustration of what the asynchrony between the SAPPA model and the external sinusoidal stimulus can look like, and how it’s measured. (B-F) Analysis of the anticipation as a function of $D$ and $\tau$ in Eq \eqref{eq:2.5}, and $A$ in Eq \eqref{eq:2.7}: (B) $A = 0$, (C) $A = -1.0$, (D) $A = -0.5$, (E) $A = 0.5$, (F) $A = 1$. In these analyses (B-F) the parameter $f = 1$. The numbers in each cell indicate the anticipation (in ms) observed when the SAPPA model synchronized with the external sinusoidal stimulus. A black cell indicates that the SAPPA model did not synchronize with the external sinusoidal stimulus and hence the asynchronies could not be computed. In the analyses (B-F), the asynchrony quickly moves away from zero as $0 < \tau < 0.5$, especially when $D = 1$. Additionally, we explored how different initial conditions affect the model’s asynchrony and discontinuities, described in the Supplementary Fig \ref{fS_2} which contains the bifurcation diagram for the SAPPA model when $D = 1$.} 
+    \label{f2_6}
+\end{figure}
+
+For this parameter analysis we fixed $f = 1$ to ignore its scaling effect. We analyzed the effect of $D$ in the range of values between $0$ and $1$, which is the dynamic range of $z$ when $F = 0$ and $D = 0$, and also the dynamic range of $F$, considering all three Eqs \eqref{eq:2.6}, \eqref{eq:2.7} or \eqref{eq:2.8}. For $\tau$, we analyzed its effect in the range of values from $0$ seconds to $0.5$ seconds, because the period associated with $f = 1$ is one second and a processing delay with duration closer to the stimulus period length would not make sense during synchronization. To observe the effect of $A$, we also tested $A = -1$, $-0.5$, $0$, $0.5$, and $1$, which are all values within the dynamic range of $z$ (when $F = 0$ and $D = 0$) and $F$ (note that when $A = 0$, Eqs \eqref{eq:2.6} and \eqref{eq:2.7} are the same).
+
+We evaluated the anticipation for all possible combinations of $D$, $\tau$, and $A$ parameters. At the beginning of each simulation, the phase of $z$ was initialized to zero. During the first few sinusoidal cycles, the SAPPA model phase-locked with the external sinusoid in order to achieve a state of stable synchronization. From a dynamical systems perspective, 'synchronization' refers to the relationship between one system's actions as closely adhering to another system's actions \cite{pecora1990synchronization}. Stable synchronization was observed when the phase difference between the stimulus sinusoid and the model's oscillators reached a constant value over time. This stable mode is known in dynamical systems theory as a steady state. Fig \ref{f2_6}D shows how we calculated the asynchrony between our model's oscillator $z$ and the stimulus sinusoid. After a simulation reached a steady state, we first found the timepoints of the peaks for the real part of the $z$ oscillator and the stimulus sinusoid. Then, we subtracted each stimulus sinusoid's peak time from the nearest $z$ oscillator's peak time. The average peak time difference between the stimulus sinusoid and the $z$ oscillator over time was considered the model's mean asynchrony. Our results are shown in Fig \ref{f2_6}. To visualize the results of these simulations, we plotted these results in matrix form, with the x axis indicating the value of $\tau$, the y axis the value of $D$, and the color in the matrix cells indicating the asynchrony. We obtained five matrices, one for each of the five values of $A$ tested.
+
+\subsection{Experiment 1: Individual tapping in synchronization with an \\ isochronous stimulus}
+
+\subsubsection{Behavioral data for simulation}
+
+In the task by Repp and Doggett \cite{repp2007tapping}, musicians and non-musicians tapped in synchrony with an isochronous metronome in a frequency range between 1Hz and 0.29Hz (corresponding to period durations between 1000ms and 3500ms). They found that the anticipatory tendency increased as a function of metronome period length. Fig \ref{f2_2}B shows our models' anticipation, as well as the linear regression on the behavioral data (Fig 1A in Repp and Doggett \cite{repp2007tapping}). We computed the linear regression lines as the best fit on the anticipation values for musicians and non-musicians.
+
+\subsubsection{Setup, procedures and measurements}
+
+Fig \ref{f2_1}A shows the human task and a graphical explanation of our simulation setup that contain the SAPPA model and the input stimulus. In these simulations, the input $F$ was $F = \exp(i2\pi f_s t) + Az$ because our model "listened" to itself (i.e. received its own instantaneous activity as input). In the parameter analysis section above, we studied the model's behavior for a frequency of 1Hz. In the human task simulated in this experiment, humans tapped with metronomes of period lengths between 3500ms (approx. 0.2857Hz) and 1000ms (1Hz). Hence, we repeated the parameter analysis with $f = 0.285$ (Fig \ref{f2_7}) to observe the model's behavior at the other end of the spectrum of stimulus frequencies corresponding to this human task. Remember that $f = f_s$. always, unless otherwise noted.
+
+\begin{figure}
+    \centering
+    \includegraphics[width=1.0\textwidth]{figures/fig2_7.png}
+    \caption[Analysis of the effect that different frequencies in the SAPPA model have on its anticipation]{\textbf{Analysis of the effect that different frequencies in the SAPPA model have on its anticipation.} (A) Analysis of the anticipation as a function of $D$ and $\tau$ in Eq \eqref{eq:2.5} when $A = -0.5$ and $f = 1$. (B) Analysis of the anticipation as a function of $D$ and $\tau$ in Eq \eqref{eq:2.5} when $A = -0.5$ and $f = 0.2857$. The numbers in the cells indicate the anticipation (in ms) observed when the SAPPA model synchronized with the external sinusoidal stimulus.}
+    \label{f2_7}
+\end{figure}
+
+\subsubsection{Model optimization}
+
+To identify the model matching the musician and the non-musician anticipation curves, we identified the set of parameters $D$, $\tau$, and $A$ that resulted in the best fit between the simulated model's anticipation and the slopes of the linear regression for the behavioral data (Fig \ref{f2_2}B). We found that $A = -0.5$, $\tau = 0.222$ seconds, and $D = 0.05$ for the musician SAPPA model and $D = 0.36$ for the non-musician SAPPA model.
+
+For all experiments that we conducted $A = -0.5$. This implies that our model's behavior is half of the magnitude of the external stimulus $\exp(i2\pi f_s t)$, which always has a magnitude of $1$, meaning that the model is forced more strongly by the external sinusoidal stimulus than by its own activity and that the SAPPA model's phase-locking behavior will be greatly determined by the phase of the external sinusoid \cite{kim2015signal}. In the SAPPA model, all recurrent feedback terms are negative. That is why $A = -0.5$ is negative in Eqs \eqref{eq:2.7} and \eqref{eq:2.8}, like the delayed recurrent feedback term in Eq \eqref{eq:2.5}. In Eq \eqref{eq:2.7}, $z$ affects the encoding of the external stimulus, shifting the phase of $F$ in a negative direction with respect to $\exp(i2\pi f_s t)$. Behaviorally, this means that when the SAPPA model listens to itself in addition to the stimulus $\exp(i2\pi f_s t)$, its actions will be more aligned with $F=\frac{\exp(i2\pi f_s t)+Az}{|\exp(i2\pi f_s t)+Az|}$, thus resulting in reduced anticipation compared to when $F = \exp(i2\pi f_s t)$.
+
+\subsection{Experiment 2: Interpersonal synchronization during alternating \\ paced tapping with or without auditory feedback}
+
+\subsubsection{Behavioral data for simulation}
+
+Among the behavioral data shown by Nowicki and colleagues \cite{nowicki2013mutual}, we were focused on simulating the results from solo and duet tasks. First, in the solo task, musicians tapped every other beat in synchrony with a metronome while hearing their own taps (feedback-on) or only hearing the metronome (feedback-off). This means that musicians' tapping behavior had a subharmonic rate with the stimulus rate (i.e., if the stimulus was presented at 2 Hz, tapping should occur at 1 Hz). As shown in Fig \ref{f2_3}A, anticipation was larger when musicians could not hear their own taps compared to when they did. Second, in the duet task, pairs of musicians alternately tapped with a metronome while hearing their own and the partner's taps (feedback-on) and also while only hearing the metronome (feedback-off). The anticipation was also larger when musicians could not hear each other in the duet task, as shown in Fig \ref{f2_3}D.
+
+\subsubsection{Setup, procedures and measurements}
+
+To simulate the feedback-off condition, we removed the $z$ term in the $F$ input, meaning that the model received input only from the external sinusoid $F = \exp(i2\pi f_s t)$. To simulate the feedback-on condition, we added the model's own $z$ activity to the input $F$ during the second half of every stimulus cycle. Finally, to simulate the duet task, we connected two SAPPA models, both synchronizing with the same external sinusoid. One of the SAPPA models exhibited in-phase synchronization with the external sinusoidal stimulus and the other one synchronized antiphase with respect to the external sinusoidal stimulus. To achieve in-phase and antiphase synchronization, the sinusoidal stimulus had a positive sign (i.e., $F = \exp(i2\pi f_s t)$) and a negative sign (i.e., $F = -\exp(i2\pi f_s t)$), respectively. To simulate the feedback-on condition, the two synchronizing SAPPA models alternately received one of the model's $z$ activity as input during the first half of every stimulus cycle, and the other model's $z$ activity during the second half of every stimulus cycle.
+
+We used the SAPPA model and the parameter set determined for musicians' data in Experiment 1. The simulations of the solo task started with a musician SAPPA model receiving an external sinusoid of frequency $f_s = 1$Hz (similarly, the SAPPA model's $f = 1$Hz). To simulate the solo task with auditory feedback, we observed the model's behavior while its own $z$ activity was added as an additional input during the second half of every stimulus cycle (feedback-on) (see Fig \ref{f2_1}B). This means that, the input alternates between $F = \exp(i2\pi f_s t)$ and $F = \exp(i2\pi f_s t) + Az$ at a frequency twice as fast as the external sinusoid, to follow the task design (e.g., listening to a metronome click, then listening to both a metronome click and own tapping). To simulate the condition without auditory feedback, the external sinusoid was set as the only input throughout the simulation (feedback-off, the input was always $F = \exp(i2\pi f_s t)$). This task design and the corresponding model setup are indicated in Fig \ref{f2_1}B and \ref{f2_1}C, respectively.
+
+To simulate the duet task indicated in Fig \ref{f2_1}D, we paired two models, of which one was referred to as model 1 and the other as model 2. To simulate the duet condition with auditory feedback, the input to model 1 was set to $F = \exp(i2\pi f_s t) \pm Az(k)$, while the input to model 2 was set to $F = -\exp(i2\pi f_s t) \pm Az(k)$, where $|A| = 0.5$ and $k$ alternated between 1 and 2 at a rate twice as fast as the frequency of the external sinusoid, as illustrated in Fig \ref{f2_1}D. As stated earlier, the sign of $\pm Az(k)$ depends on whether $z$ indicates recurrent feedback (positive) or the other model’s activity (negative). To simulate the duet condition without auditory feedback, both models received only the external sinusoid as input ($F$ was always $F = \exp(i2\pi f_s t)$ for model 1 and $F = -\exp(i2\pi f_s t)$ for model 2). Fig \ref{f2_1}E illustrates the simulation of the condition without auditory feedback.
+
+The mean asynchrony between the stimulus and the in-phase synchronizing model was computed in the same manner as Experiment 1, as the difference between the peak of the real part of the models' oscillation and the closest peak timepoints in the real part of the stimulus sinusoid. The mean asynchrony between the stimulus and the anti-phase synchronizing model was computed as the difference between the peak of the real part of the models' oscillation and the closest valley timepoints in the real part of the stimulus sinusoid.
+
+\subsubsection{Model optimization}
+
+The SAPPA models in this experiment were the same musician and non-musician models identified in Experiment 1. Therefore, the model architecture used in this experiment is summarized by Eq \eqref{eq:2.5}. Simulations lasted a total of 20 seconds.
+
+\subsection{Experiment 3: Interpersonal synchronization during rhythm-\\ clapping alternation in the presence of transmission latencies}
+
+\subsubsection{Behavioral data for simulation}
+
+In the behavioral paradigm used by Chafe and colleagues \cite{chafe2010effect}, two musicians in different rooms alternately clapped a staggered and looping rhythmic pattern together for an extended period of time. TLs were introduced between the musicians to simulate transmission delays over the internet when remotely located individuals play music together. Such latencies via an internet connection typically range from 20ms to 100ms \cite{caceres2010jacktrip, caceres2008edge}. The rhythmic task consisted of three claps interspaced with periods of relative length of 1-1-2. The two musicians synchronized and performed the pattern in a staggered manner with a half pattern overlap; the first musician started the first half of the pattern with doing two claps (1-1-) alone, and at the third clap (2-), the starting point of the second half of the pattern, the second musician started the first half of the pattern from the beginning (1-1-). When the second musician started the second half of the pattern (2-), the first musician returned to the first half of the pattern (1-1-) and so on. They repeated this without interruption for about 30 s (see Fig \ref{f2_1}F). Before starting, the first musician heard a metronome for six counts. The metronome was randomly set at a tempo of either 86 bpm (beat-per-minute), 90 bpm, or 94 bpm to avoid habituation effects. The second musician did not hear the metronome and joined after hearing the auditory outcomes of the starter’s actions for the first half of the pattern. Delivery of auditory outcome information between subjects was bidirectionally delayed by a TL. For a given trial, the latency stayed at a constant value. Latencies between 3ms and 78ms were examined. The results show that with TLs longer than 20ms the two musicians decelerated their common tempo. For the latencies shorter than 10ms, they accelerated instead. As shown in Fig \ref{f2_4}B, the asynchrony between the two musicians at every cycle grew as a function of the TL.
+
+\subsubsection{Setup, procedures and measurements}
+
+To simulate this paradigm, we used a pair of musician SAPPA models like the one developed in Experiment 1, and set them up to feed one model's $z$ activity as an input to the other at a given cycle, then alternate this input flow direction (see Fig \ref{f2_1}F). The first model is considered to be the initiator and the other, the joiner. In our simulations, $f$ for both oscillators was set to be a frequency of 1.5Hz, equivalent to 90 bpm. For the sake of simplicity, we did not employ the nearby offsets of this frequency that were used by Chafe and colleagues \cite{chafe2010effect} to mitigate adaptation to a specific tempo by the subjects. The simulations were also carried out with pairs of non-musician SAPPA models. Compared to Experiment 1 and Experiment 2 where an external sinusoid stimulated the SAPPA model, in Experiment 3 pairs of oscillators stimulated each other, and there was no external sinusoid.
+
+A simulation of the original experiment began by allowing the initiator SAPPA model to oscillate for one cycle. During this cycle, the initiator received its own $z$ activity as an input (the input to the initiator was $F = Az(1)$) and sent its $z$ activity as an input to the joiner (the input to the joiner was $F = z(1)$). After receiving an input from the initiator for one cycle, the joining model continued oscillating one cycle getting its own $z$ activity as an input (the input to the joiner was $F = -Az(2)$) and sending its $z$ activity to the initiator (the input to the initiator is then $F = z(2)$). In subsequent cycles, the inputs to the two models continued alternating every cycle which oscillator's $z$ activity was used as the inputs to both oscillators. At a given cycle, whichever model's $z$ activity was used as an input to both models was referred to as the 'active' model, while the other one was referred to as the 'passive' model. This alternation was repeated until the simulation had run for 30 seconds to complete a trial. Trials were carried out in the presence of fixed TLs ranging from 0ms to 78ms between models.
+
+We measured the Lead/Lag relationship between models in the same way as Chafe and colleagues \cite{chafe2010effect}. For each participant clapping in turn, the Lead/Lag relationship with respect to the other participant was measured as: 
+
+\begin{equation}
+L = (a(1) - b(1)) + (b(2) - a(2)) \label{eq:2.9}
+\end{equation}
+
+Where $a(1)- b(1)$ is the time difference in seconds between the first clap of the participant currently in turn and the last clap of the participant previously in turn. $b(2)–a(2)$ is the time difference between the first clap of the participant clapping after the current participant in turn and the last clap of the current participant in turn. $L$ can be expressed as a fraction of a 90 bpm tempo, as in Chafe and colleagues \cite{chafe2010effect}, using the expression: $- 90 \times L \div (60 \times 1000)$, where $L$ (in ms) gets converted to a fraction of a period corresponding to a 90bpm tempo. If the resulting value was negative, this meant that the passive oscillator lagged behind the active oscillator. A positive value suggests the opposite.
+
+\subsubsection{Model optimization}
+
+The SAPPA model in this experiment was similar to the musician and non-musician models identified in Experiment 1. Therefore, the model architecture used in this experiment is summarized by Eq \eqref{eq:2.5}. Compared to Experiments 1 and 2, in this experiment these was no external sinusoidal stimulus. Instead, pairs of SAPPA models stimulated each other.
 
 \chapter{Hebbian tempo learning with elasticity explains how a musician's spontaneous motor tempo affects periodic synchronization}
 \chaptermark{Hebbian learning explains synchronization}
@@ -249,6 +364,7 @@ I have presented a new model that explains anticipatory behavior in humans using
     \caption[The SAPPA model’s behavior when the external periodic input is a square wave instead of a sinusoid]{\textbf{The SAPPA model’s behavior when the external periodic input is a square wave instead of a sinusoid.} (A) Illustration of what the asynchrony between the SAPPA model and the external square wave stimulus looks like, and how it’s measured. (B) Analysis of the asynchrony (in ms) as a function of $D$ and $\tau$ in Eq \eqref{eq:2.5} when $A = -0.5$ and $f = 1$. (C) The anticipation observed when the musician (green dots) and non-musician (yellow dots) SAPPA models were stimulated by the external square wave while also receiving their own non-delayed activity as input ($A = -0.5$). In all simulations $\tau = 0.222$ seconds. The $D$ parameter differentiates the musician and non-musician models. The regression lines for the behavioral data originally shown in Fig \ref{f2_1}A are shown for comparison purposes in (C).}
     \label{fS_1}
 \end{figure}
+
 \begin{figure}
     \centering
     \includegraphics[width=1.0\textwidth]{figures/figS_2.png}
