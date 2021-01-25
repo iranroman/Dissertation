@@ -208,7 +208,7 @@ Music has a tempo (or frequency of the underlying beat) that musicians maintain 
 % Use first person. PLOS ONE authors please skip this step. 
 % Author Summary not valid for PLOS ONE submissions.   
 \section*{Author summary}
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta erat. Morbi consectetur est vel gravida pretium. Suspendisse ut dui eu ante cursus gravida non sed sem. Nullam sapien tellus, commodo id velit id, eleifend volutpat quam. Phasellus mauris velit, dapibus finibus elementum vel, pulvinar non tellus. Nunc pellentesque pretium diam, quis maximus dolor faucibus id. Nunc convallis sodales ante, ut ullamcorper est egestas vitae. Nam sit amet enim ultrices, ultrices elit pulvinar, volutpat risus.
+Individuals can keep a musical tempo on their own or timed by another individual or a metronome. Experiments show that individuals show a specific spontaneous rate of periodic action, for example walking, blinking, or singing. Moreover, in a simple metronome synchronization task, an individual's spontaneous rate determines that the individual will tend to anticipate a metronome that is slower, and lag a metronome that is faster. Researchers have hypothesized the mechanisms explaining how spontaneous rates affect synchronization, but no hypothesis can account for all observations yet. Our hypothesis is that individuals rely on elastic Hebbian frequency learning during synchronization tasks to adapt the rate of their movements and match another individual's actions or metronome tempo. Elastic Hebbian frequency learning also explains why an individual's spontaneous rate persists after carrying out a musical synchronization task. We define a new model with elastic Hebbian frequency learning and use it to simulate existing empirical data. Not only can our model explain the empirical data, but it can also make testable predictions. Our results support the theory that the brain's endogenous rhythms give rise to spontaneous rates of movement, and that learning dynamics interact with such brain rhythms to allow for flexible synchronization.
 
 \linenumbers
 
@@ -217,7 +217,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eget porta er
 
 Humans can efforlessly sing a song in the shower or walk on an empty street. In such a solo setting, individuals show a spontaneous singing tempo or walking pace. In everyday life, however, humans often have to synchronize with external signals. For example, singing with a pre-recorded song or marching in a parade with other individuals. In the specific case of musical performances, musicians change the tempo of their actions to match a musical tempo that is kept by the group of performing musicians. When musicians synchronize with each other they carry out perception-action coordination, which involves the coordinated communication between the brain's sensory areas that perceive stimuli and the motor system that executes actions \cite{ridderinkhof2014neurocognitive}. However, most musical performances do not match a musician's spontaneous tempo. How a musician's spontaneous tempo affects a musical performance is still an open question \cite{zamm2018musicians}. To tackle this question, one must first study the spontaneous tempo of periodic action, like finger tapping. The spontaneous motor period (SMP) can be obtained by calculating the average inter-onset interval (IOI) between consecutive periodic actions \cite{mcauley2006time}.
 
-Before diving deep into our overview of previous research, we must clarify some important terminology. ``Periodic" phenomena get this name because a consistent `period' of time (i.e., milliseconds, seconds, minutes, hours, days, etc.) describes the organization of sequential events. In general, to measure the sate of periodic phenomena one can use `frequency' in units of hertz (cycles or events per second). All frequencies have a `period' of time between cycles or periodic events. Consider for example a metronome, which is the simplest example of periodic phenomena. To measure the rate of the metronome, we can use a frequency in hertz. Similarly, to measure the `period' between metronome clicks, we can use the IOI in units of (milli)seconds. In music, not all events are isochronous, and consecutive events may not share a single IOI. Nonetheless, most music has a tempo (or frequency of the underlying beat) which is measured in units of beats per minute (BPM). The units of BPM and hertz are similar in the sense that both consist of rates counting the number of events over a length of time. The `period' between beats in music is termed the inter-beat interval (IBI), in units of (milli)seconds. The IOI and IBI share the same units of (milli)seconds because they measure the length of time between events or beats, respectively. We are explainign all of this because of this critical issue: when reading the existing SMT literature, one should not confuse the term `musical tempo" and the SMT due to the fact that both have the word `tempo' in their name. The existing literature describes the SMT in units of (milli)seconds, which is incorrect. The word `tempo' in music implies a frequency, so proper units for such a mesurement could be BPM or hertz, not (milli)seconds. The correct name for the SMT should have been the `spontaneous motor period' (SMP) because a `period' does imply units of (milli)seconds. Similar to the SMT, the term `spontaneous performance rate' (SPR), also measured in (milli)seconds, has been used to describe the IBI shown by individuals when asked to spontaneously perform a simple melody \cite{zamm2016endogenous}. The existing usage of the term SPR is also incorrect, just like the SMT. The SPR should have been called the `spontaneous performance period' (SPP) because it is measured in units of (milli)seconds. Here we acknowledge these unfortunate misnomers because we will use the correct terminology when describing our experiments. Table \ref{tab:t3_1} shows a summary of the terms, abbreviations, and the correct corresponding units. However, when describing results from previous studies, we will still use the SMT and SPR terms in the original context, clearly stating that its original use was incorrect.
+Before diving deep into our overview of previous research, we must clarify some important terminology. ``Periodic" phenomena get this name because a consistent `period' of time (i.e., milliseconds, seconds, minutes, hours, days, etc.) describes the organization of sequential events. In general, to measure the sate of periodic phenomena one can use `frequency' in units of hertz (cycles or events per second). All frequencies have a `period' of time between cycles or periodic events. Consider for example a metronome, which is the simplest example of periodic phenomena. To measure the rate of the metronome, we can use a frequency in hertz. Similarly, to measure the `period' between metronome clicks, we can use the IOI in units of (milli)seconds. In music, not all events are isochronous, and consecutive events may not share a single IOI. Nonetheless, most music has a tempo (or frequency of the underlying beat) which is measured in units of beats per minute (BPM). The units of BPM and hertz are similar in the sense that both consist of rates counting the number of events over a length of time. The `period' between beats in music is termed the inter-beat interval (IBI), in units of (milli)seconds. The IOI and IBI share the same units of (milli)seconds because they measure the length of time between events or beats, respectively. We are explainign all of this because of this critical issue: when reading the existing SMT literature, one should not confuse the term `musical tempo" and the SMT due to the fact that both have the word `tempo' in their name. The existing literature describes the SMT in units of (milli)seconds, which is incorrect. The word `tempo' in music implies a frequency, so proper units for such a mesurement could be BPM or hertz, not (milli)seconds. The correct name for the SMT should have been the `spontaneous motor period' (SMP) because a `period' does imply units of (milli)seconds. Similar to the SMT, the term `spontaneous performance rate' (SPR), also measured in (milli)seconds, has been used to describe the IBI shown by individuals when asked to spontaneously perform a simple melody \cite{zamm2016endogenous}. The existing usage of the term SPR is also incorrect, just like the SMT. The SPR should have been called the `spontaneous performance period' (SPP) because it is measured in units of (milli)seconds. Here we acknowledge these unfortunate misnomers because we will use the correct terminology when describing our experiments. Table~\ref{tab:t3_1} shows a summary of the terms, abbreviations, and the correct corresponding units. However, when describing results from previous studies, we will still use the SMT and SPR terms in the original context, clearly stating that its original use was incorrect.
 
 \begin{table}
     \begin{center}
@@ -253,7 +253,7 @@ Righetti and colleagues described Hebbian dynamics for frequency learning, which
 
 Behavioral studies have proposed an elastic tempo learning hypothesis to explain the relationship between the SMT and the MA in humans \cite{scheurich2018tapping}. However, no study so far has quantified how well a dynamical systems model with elastic frequency learning could capture dynamics observed in human data. In this study we test this hypothesis using an oscillatory dynamical systems model with Hebbian learning for frequency adaptation and an elastic force constantly pulling to the natural frequency. More specifically, we use the canonical neural oscillator model described by Large and colleagues \cite{large2010canonical}, and add elastic frequency learning dynamics \cite{righetti2009adaptive, lambert2016adaptive}. The goal is to validate the model using real human data from previous studies of musical performance that analyzed the relationships between the SMT and the MA. If we can achieve either goal, we will show how an individual's SMT affects the MA during coordination with a metronome or another individual. Our modeling approach is appropriate because oscillators have a fixed natural frequency observed spontaneously in the absence of an external stimulus. This natural frequency models the SMT. Because our model has an elastic frequency learning rule, it can adapt its frequency to synchronize with a periodic stimulus of any frequency, but displaying the MA due to the elastic force constantly pulling the oscillator's frequency to its natural frequency. This elastic frequency learning rule simulates two human features. First, the ability to synchronize with a broad range of periodic stimulus tempi. And second, the consistent SMT displayed by humans, even after synchronization with a stimulus of a different tempo.
 
-Given all of its features, we refer to our model as the Adaptive Synchronization with Hebbian Learning and Elasticity (ASHLE). Table \ref{tab:t3_2} presents an overview of the most important ASHLE parameters and their functions. The ASHLE model is inspired by neuroscientific hypotheses about the mechanisms of coodination. The methods section gives the complete definition of ASHLE, but here we briefly describe its main properties. ASHLE consists of two oscillators. Both oscillators share the parameters $\alpha$ and $\beta$, which lead to spontaneous oscillatory activity with an amplitude of one. The first oscillator is stimulated by an external stimulus, and simulates auditory neural entrainment with the stimulus frequency \cite{large2015neural, patel2014evolutionary, daly2014changes, grahn2009feeling, grahn2013finding}. This first oscillator is equipped with the Hebbian rule to learn the frequency of the external stimulus. The second oscillator receives the activity of the first oscillator as input, and simulates motor planning entrained to control the actions of peripheral effectors (i.e., fingers playing a piano). We use the activity of the second oscillator to simulate the actions of humans performing a musical task. This second oscillator is equipped with the elastic Hebbian rule to learn the stimulus frequency (from the first oscillator), while constantly being pulled to its natural frequency. In ASHLE, the timescales of the Hebbian frequency learning rule and the elasticity rule are relatively fast (see the parameter analysis in the methods section). The parameters $\lambda_1$ and $\lambda_2$ are the stimulus frequency learning rate and the elastic force pulling to the natural frequency, respectively, and act as opposing forces. Additionally, the first oscillator is weakly connected (with strength $\gamma$) to the elastic Hebbian rule of the second oscillator, forcing the first oscillator to return to the natural frequency, but at a very slow timescale and only in the absence of a stimulus. $\gamma$ is very small, and has a negligible effect when a stimulus drives ASHLE. However, in the absence of a stimulus, $\gamma$ makes ASHLE slowly return to its natural frequency.
+Given all of its features, we refer to our model as the Adaptive Synchronization with Hebbian Learning and Elasticity (ASHLE). Table~\ref{tab:t3_2} presents an overview of the most important ASHLE parameters and their functions. The ASHLE model is inspired by neuroscientific hypotheses about the mechanisms of coodination. The methods section gives the complete definition of ASHLE, but here we briefly describe its main properties. ASHLE consists of two oscillators. Both oscillators share the parameters $\alpha$ and $\beta$, which lead to spontaneous oscillatory activity with an amplitude of one. The first oscillator is stimulated by an external stimulus, and simulates auditory neural entrainment with the stimulus frequency \cite{large2015neural, patel2014evolutionary, daly2014changes, grahn2009feeling, grahn2013finding}. This first oscillator is equipped with the Hebbian rule to learn the frequency of the external stimulus. The second oscillator receives the activity of the first oscillator as input, and simulates motor planning entrained to control the actions of peripheral effectors (i.e., fingers playing a piano). We use the activity of the second oscillator to simulate the actions of humans performing a musical task. This second oscillator is equipped with the elastic Hebbian rule to learn the stimulus frequency (from the first oscillator), while constantly being pulled to its natural frequency. In ASHLE, the timescales of the Hebbian frequency learning rule and the elasticity rule are relatively fast (see the parameter analysis in the methods section). The parameters $\lambda_1$ and $\lambda_2$ are the stimulus frequency learning rate and the elastic force pulling to the natural frequency, respectively, and act as opposing forces. Additionally, the first oscillator is weakly connected (with strength $\gamma$) to the elastic Hebbian rule of the second oscillator, forcing the first oscillator to return to the natural frequency, but at a very slow timescale and only in the absence of a stimulus. $\gamma$ is very small, and has a negligible effect when a stimulus drives ASHLE. However, in the absence of a stimulus, $\gamma$ makes ASHLE slowly return to its natural frequency.
 
 \begin{table}
     \begin{center}
@@ -303,7 +303,7 @@ We used ASHLE to simulate the solo task by Scheurich and colleagues \cite{scheur
 
 We can use ASHLE to simulate the beat during this music performance task. We hypothesized that ASHLE's frequency learning features will allow it to synchronize with a stimulus period shorter or longer than the period associated with its natural frequency, but an asynchrony between ASHLE and the stimulus will be observed due to the elastic force constantly pulling ASHLE's to its natural frequency. This first experiment uses a sinusoidal stimulus to simulate the metronome.
 
-\begin{figure}
+\begin{figure}[!h]
 \caption{{\bf Simulation of the MA between a musician's beat and a metronome beat with a period shorter or longer than the musician's SMP during solo musical performance.} (A) The mean adjusted asynchrony (and standard error; N=20) between the musician beat and metronome beat during performance of a simple melody in four conditions: metronome period 30\% shorter (F30), 15\% shorter (F15), 15\% longer (S15), and 30\% longer (S30) compared to the musician SMP. The F30, F15, S15, and S30 names for the x axis were used by Scheurich and colleagues \cite{scheurich2018tapping} to describe the ``faster" and ``slower" tempo compared to the SMT. Their use is incorrect, however, as a ratio (or percent) of the SMP determines the experimental metronome period, and not a ratio of the speed or rate (implied by the use of `F' and `S' for ``faster" and ``slower", respectively). Here we have pointed out their mistake to clarify the error, but we use their same original labels for the x axis in order to compare our simulation results with their original data. (B) Our simulation results showing the mean adjusted asynchrony (and standard error; N=20) between ASHLE and a sinusoidal stimulus in six conditions: stimulus period 45\% shorter (F45), 30\% shorter (F30), 15\% shorter (F15), 15\% longer (S15), 30\% longer (S30), and 45\% longer (S45) than the period of ASHLE's natural frequency. The shaded bars represent predicted measurements for data that has not been collected yet from musicians. (C) Mean adjusted asynchrony predictions when different ASHLE models (with different natural frequencies) synchronize with a stimulus period that is 45\% shorter (F45), 30\% shorter (F30), 15\% shorter (F15), 15\% longer (S15), 30\% longer (S30), or 45\% longer (S45) than the period of their natural frequecy. The values in (C) are predictions for musician data that has not been collected yet.}
 \label{fig2}
 \end{figure}
@@ -316,7 +316,7 @@ For each ASHLE model we simulated the task in four experimental conditions where
 
 Experiment 1 showed that our model can capture the MA that Scheurich and colleagues \cite{scheurich2018tapping} observed when musicians individually performed a simple melody paced by a metronome faster or slower than their SMT. In this second experiment, we used ASHLE to simulate the data by Zamm and colleagues \cite{zamm2018musicians}, who studied what happens when musicians perform a simple melody unpaced, but starting at a tempo different than the SMT (Fig~\ref{fig1}B). Their experiment had four experimental conditions: starting performance tempo fast, faster, slow, and slower than the SMT. Fig~\ref{fig3}A shows their results, which consisted of the adjusted slope (mean across musicians) in each of the four different experimental conditions. The adjusted slope is equal to the slope that best fit consecutive IBIs during a melody performance starting at a tempo different than the SMT, minus the slope that best fit the consecutive IBIs during a melody performance that starts at the SMT. The data shows that when musicians started at a tempo faster than the SMT the mean adjusted slope was positive (musicians slowed down; consecutive IBIs became longer), and when musicians started at a tempo slower than the SMT the mean adjusted slope was negative (musicians sped up; consecutive IBIs became smaller; see Fig~\ref{fig3}A). Their results show that musicians had a tendency to return to their SMT during a simple melody performance that started at a tempo different than their SMT \cite{zamm2018musicians}. 
 
-\begin{figure}
+\begin{figure}[!h]
 \caption{{\bf Simulation of the slope between consecutive IBIs when an unpaced musician performs a melody starting at a tempo that is different than the SMT.} (A) The mean adjusted slope of consecutive IBIs (and standard error; N=24) when solo musicians perform a simple melody starting a tempo that is fast, faster, slow, or slower compared to the musicians SMTs. (B) Our simulation results showing the mean adjusted slope of consecutive IBIs (and standard error; N=23) when ASHLE oscillates, without a stimulus, starting at a frequency that is fast, faster, slow, or slower compared to the natural frequency. (C) Adjusted slope predictions when different ASHLE models (with different periods of natural frequency) oscillate without stimulation, starting with a period that is 45\% shorter (F45), 30\% shorter (F30), 15\% shorter (F15), 15\% longer (S15), 30\% longer (S30), or 45\% longer (S45) compared to the period of ASHLE's natural frequency. For consistency with experiment 1 results, here we also use the F30, F15, S15, and S30 names for the x axis that Scheurich and colleagues \cite{scheurich2018tapping} use to describe the ``faster" and ``slower" tempo conditions. The values in C are predictions for musician data that has not been collected yet.}
 \label{fig3}
 \end{figure}
@@ -333,114 +333,509 @@ We used the same ASHLE parameters as in experiments 1 and 2, except that $F_z = 
 
 Fig~\ref{fig4}A shows their results, which consisted of the mean absolute asynchrony between the beats of the two performing musicians in each of the two experimental groups, separately for each of the four melody repetitions (see the methods section for a detailed description of the task by Zamm and colleagues \cite{zamm2016endogenous}). This data shows that the mean absolute asynchrony was smaller between musician duets with matching SMTs compared musician duets with mismatching SMTs. We used ASHLE to simulate the beats during this musical performance task. We hypothesized that two ASHLE models will be able to synchronize with each other due to their frequency learning mechanism. However, the elasticity pulling to their respective natural frequency will result in asynchrony between them, and the asynchrony will be smaller between two synchronizing ASHLE models with similar natural frequency values compared to two ASHLE models with dissimilar natural frequency values. In this third experiment pairs of ASHLE models are stimulated first by a sinusoid that establishes a common frequency and then the two ASHLE models stimulate each other. As a result, stimulation in this third experiment is slightly more complex than the constant sinusoidal stimulation in experiment 1 and the lack of stimulation in experiment 2.
 
-\begin{figure}
-\caption{{\bf Simulation of the mean absolute asynchrony between two musicians with matching or mismatching SMTs during duet musical performance.} (A) The mean absolute asynchrony (and standard error; in each experimental group N=10) between two musicians with matching or mismatching SMTs during performance of a simple melody four consecutive times. (B) Our simulation results showing the mean absolute asynchrony between two synchronizing ASHLE models with natural frequency values that are close or far from each other. (C) Mean absolute asynchrony predictions when different ASHLE models (with different periods of natural frequency) synchronize with another ASHLE model with a period of natural frequency that is 220ms shorter, 110ms shorter, 10ms shorter, 10ms longer, 110ms longer, and 220ms longer. The values in C are predictions for data that has not been collected yet from musicians.}
-\label{f3_4}
-\end{figure}
-
-
-\section*{Materials and methods}
-\subsection*{Etiam eget sapien nibh}
-
-% For figure citations, please use "Fig" instead of "Figure".
-Nulla mi mi, Fig~\ref{fig1} venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, \nameref{S1_Video} vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
-
-% Place figure captions after the first paragraph in which they are cited.
 \begin{figure}[!h]
-\caption{{\bf Bold the figure title.}
-Figure caption text here, please use this space for the figure panel descriptions instead of using subfigure commands. A: Lorem ipsum dolor sit amet. B: Consectetur adipiscing elit.}
-\label{fig1}
+\caption{{\bf Simulation of the mean absolute asynchrony between two musicians with matching or mismatching SMTs during duet musical performance.} (A) The mean absolute asynchrony (and standard error; in each experimental group N=10) between two musicians with matching or mismatching SMTs during performance of a simple melody four consecutive times. (B) Our simulation results showing the mean absolute asynchrony between two synchronizing ASHLE models with natural frequency values that are close or far from each other. (C) Mean absolute asynchrony predictions when different ASHLE models (with different periods of natural frequency) synchronize with another ASHLE model with a period of natural frequency that is 220ms shorter, 110ms shorter, 10ms shorter, 10ms longer, 110ms longer, and 220ms longer. The values in C are predictions for data that has not been collected yet from musicians.}
+\label{fig4}
 \end{figure}
-
-% Results and Discussion can be combined.
-\section*{Results}
-Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
-
-% Place tables after the first paragraph in which they are cited.
-\begin{table}[!ht]
-\begin{adjustwidth}{-2.25in}{0in} % Comment out/remove adjustwidth environment if table fits in text column.
-\centering
-\caption{
-{\bf Table caption Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam.}}
-\begin{tabular}{|l+l|l|l|l|l|l|l|}
-\hline
-\multicolumn{4}{|l|}{\bf Heading1} & \multicolumn{4}{|l|}{\bf Heading2}\\ \thickhline
-$cell1 row1$ & cell2 row 1 & cell3 row 1 & cell4 row 1 & cell5 row 1 & cell6 row 1 & cell7 row 1 & cell8 row 1\\ \hline
-$cell1 row2$ & cell2 row 2 & cell3 row 2 & cell4 row 2 & cell5 row 2 & cell6 row 2 & cell7 row 2 & cell8 row 2\\ \hline
-$cell1 row3$ & cell2 row 3 & cell3 row 3 & cell4 row 3 & cell5 row 3 & cell6 row 3 & cell7 row 3 & cell8 row 3\\ \hline
-\end{tabular}
-\begin{flushleft} Table notes Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed.
-\end{flushleft}
-\label{table1}
-\end{adjustwidth}
-\end{table}
-
-
-%PLOS does not support heading levels beyond the 3rd (no 4th level headings).
-\subsection*{\lorem\ and \ipsum\ nunc blandit a tortor}
-\subsubsection*{3rd level heading} 
-Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. 
-
-\begin{enumerate}
-	\item{react}
-	\item{diffuse free particles}
-	\item{increment time by dt and go to 1}
-\end{enumerate}
-
-
-\subsection*{Sed ac quam id nisi malesuada congue}
-
-Nulla mi mi, venenatis sed ipsum varius, volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero.
-
-\begin{itemize}
-	\item First bulleted item.
-	\item Second bulleted item.
-	\item Third bulleted item.
-\end{itemize}
 
 \section*{Discussion}
-Nulla mi mi, venenatis sed ipsum varius, Table~\ref{table1} volutpat euismod diam. Proin rutrum vel massa non gravida. Quisque tempor sem et dignissim rutrum. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi at justo vitae nulla elementum commodo eu id massa. In vitae diam ac augue semper tincidunt eu ut eros. Fusce fringilla erat porttitor lectus cursus, vel sagittis arcu lobortis. Aliquam in enim semper, aliquam massa id, cursus neque. Praesent faucibus semper libero~\cite{bib3}.
 
-\section*{Conclusion}
+\subsection*{The interaction of Hebbian learning and elasticity mechanisms during beat tracking can capture various PAC dynamics}
 
-CO\textsubscript{2} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque. Quisque augue sem, tincidunt sit amet feugiat eget, ullamcorper sed velit. 
+In experiments 1 and 3, the asynchrony between ASHLE and a periodic stimulus was affected by the elastic Hebbian frequency learning rule. Similarly, experiment 2 showed that, in the absence of a stimulus, the elastic Hebbian frequency learning also affected the frequency of ASHLE's spontaneous activity, especially if ASHLE's frequency was different than its natural frequency. The rate of ASHLE's oscillatory behavior is the result of elastic frequency learning, with Hebbian frequency learning and the elasticity acting as opposing forces. While Hebbian frequency learning lets ASHLE change its frequency to match any stimulus frequency, the elastic force pulls ASHLE toward its natural frequency. ASHLE's behavior is consistent with theoretical accounts highlighting that a dynamical system's natural frequency is the optimal state for synchronization, even if the system can synchronize at other frequencies \cite{von1937nature, haken1985theoretical, kelso1997relative, scheurich2018tapping}. An interesting question is where in the musician brain these mechanisms of frequency learning and frequency elasticity occur. As far as frequency learning, previous research shows that cortical and subcortical networks in motor brain areas synchronize neural activity that reflects the rhythms of a periodic stimulus \cite{large2015neural, chen2008moving, grahn2009feeling, fujioka2012internalized}. The origins of the SMT in humans (simuated by ASHLE's natural frequency) involve both the central and the peripheral nervous system. Central pattern generators in the nervous system give rise to spontaneous rhythms that directly control the SMT \cite{latash1992virtual}. Additionally, production of SMTs involves the actions of effectors (i.e., foot or fingers), so anatomical and biomechanical factors could also directly contribute to defining a system's SMT \cite{goodman2000advantages}. Currently no consensus exists about the origins of the SMT and its influence during PAC. ASHLE is the first model validated by real human data that captures how motor actions entrain to the tempo of a periodic stimulus and are influenced by the dynamic principles of elastic Hebbian frequency learning. By using a dynamical systems model, we rule in a family of possible biomechanical principles \cite{bose2019neuromechanistic} that could underlie the origins of the SMT.
 
-Sed non aliquet felis. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo justo ac dui pretium imperdiet. Sed suscipit iaculis mi at feugiat. Ut neque ipsum, luctus id lacus ut, laoreet scelerisque urna. Phasellus venenatis, tortor nec vestibulum mattis, massa tortor interdum felis, nec pellentesque metus tortor nec nisl. Ut ornare mauris tellus, vel dapibus arcu suscipit sed. Nam condimentum sem eget mollis euismod. Nullam dui urna, gravida venenatis dui et, tincidunt sodales ex. Nunc est dui, sodales sed mauris nec, auctor sagittis leo. Aliquam tincidunt, ex in facilisis elementum, libero lectus luctus est, non vulputate nisl augue at dolor. For more information, see \nameref{S1_Appendix}.
+\subsection*{Experiment 1: Solo music performance with a metronome tempo different than the SMT}
 
-\section*{Supporting information}
+Our model was able to reproduce the mean adjusted asynchrony between musician beats and metronome beats when the metronome tempo is faster or slower than the musician's SMT, in a simple musical performance task (Fig~\ref{fig2}A and Fig~\ref{fig2}B). Taking a closer look at the behavioral data in Fig~\ref{fig2}A we see that the magnitude of the mean adjusted asynchrony values is slightly asymmetric between faster and slower stimuli with respect to the SMT. Faster metronomes resulted in slightly larger mean adjusted asynchrony magnitudes than slower ones. This human behavior implies frequency-scaling of the elastic Hebbian learning rule in Eqs \eqref{eq:3.6} and \eqref{eq:3.8} (see \cite{kim2015signal, large2010canonical} for more theory about frequency-scaled dynamical systems similar to ASHLE). Additionally, ASHLE's elasticity term $-\lambda_2\left(\exp\left(\frac{f_m-f_0}{f_0}\right)-1\right)$ in Eq \eqref{eq:3.8} is an exponential function so that a stimulus faster than ASHLE's natural frequency (causing $\exp\left(\frac{f_m-f_0}{f_0}\right)-1>0$) would result in an exponentially larger force toward the natural frequency compared to a stimulus slower than ASHLE's natural frequency (causing $\exp\left(\frac{f_m-f_0}{f_0}\right)-1<0$). Due to frequency scaling, higher values of $f_e$ and $f_m$ amplify the learning rate ($\lambda_1$) and the elastic force ($\lambda_2$), while lower values of $f_e$ and $f_m$ shrink them. In ASHLE $f_e$ and $f_m$ are always very close (if not identical) in value to each other. ASHLE's mechanisms and behavior are validated by its ability to simulate the data by Scheurich and colleagues \cite{scheurich2018tapping} (Fig~\ref{fig2}A and Fig~\ref{fig2}B).
 
-% Include only the SI item label in the paragraph heading. Use the \nameref{label} command to cite SI items in the text.
-\paragraph*{S1 Fig.}
-\label{S1_Fig}
-{\bf Bold the title sentence.} Add descriptive text after the title of the item (optional).
+ASHLE's mechanisms of frequency learning and elastic force pulling to the natural frequency are also conceived in neuroscientific terms. ASHLE's frequency learning rate parameter, $\lambda_1$, simulates the brain's ability to entrain perceptual networks when processing a periodic stimulus like a musical beat or a metronome tempo \cite{large2015neural}. In contrast, ASHLE's elasticity parameter, $\lambda_2$, reflects the neural and biomechanical properties that give rise to the SMT \cite{goodman2000advantages}
 
-\paragraph*{S2 Fig.}
-\label{S2_Fig}
-{\bf Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+While ASHLE was able to simulate the musician data by Scheurich and colleagues \cite{scheurich2018tapping}, the model used in experiment 1 does not show variability in its dynamics. Once ASHLE phase-locks with the sinusoidal stimulus, the asynchrony between ASHLE and the stimulus reaches a steady state with zero variability. This is a limitation of ASHLE's ability to simulate musician's beat tracking behavior, reflected by a degree of variability across musician IBIs. In experiment 1, this lack of variability was a limitation to perfectly simulate the results by Scheurich and colleagues \cite{scheurich2018tapping}. Using ASHLE models with different natural frequency values allowed us to simulate the variability between musicians (hence the standard error in Fig~\ref{fig2}B). However, our standard errors were overall smaller compared to the musician standard errors that Scheurich and colleagues \cite{scheurich2018tapping} reported. The standard error in musicians has two sources: (1) variability within each musician's beat tracking behavior and (2) variability between the behavior of different musicians. While we were able to simulate the variability between musicians using ASHLE models with different natural frequency values, the lack of noise in ASHLE's activity is the likely cause of the difference between our simulation results and the musician results. Adding gaussian noise to ASHLE's activity could better approximate the musician results. However, we considered the addition of noise to be beyond the scope of this first experiment because our goal was to optimize ASHLE to simulate the magnitude of the mean adjusted asynchrony (see model optimization in the methods section).
 
-\paragraph*{S1 File.}
-\label{S1_File}
-{\bf Lorem ipsum.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+ASHLE also made testable predictions of paced musician performance in a solo setting (Fig~\ref{fig2}B and Fig~\ref{fig2}C). First, it predicted mean adjusted asynchrony values that we could expect if the same group of musicians were to carry out the task synchronizing with a metronome period 45\% shorter or longer than the SMP (Fig~\ref{fig2}B shaded bars). Additionally, Fig~\ref{fig2}C made predictions at the individual musician level, simulating the mean adjusted asynchronies that musicians with different SMP would produce when performing a melody with various metronome tempi faster or slower than the SMT. These simulations sho that ASHLE can be used to make predictions about a musician's behavior with any SMT, and such predictions can be empirically tested to further validate ASHLE's behavior or better tune its parameters.
 
-\paragraph*{S1 Video.}
-\label{S1_Video}
-{\bf Lorem ipsum.}  Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+\subsection*{Experiment 2: Unpaced solo music performance with a starting tempo different than the SMT}
 
-\paragraph*{S1 Appendix.}
-\label{S1_Appendix}
-{\bf Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+Our model was also able to simulate the mean adjusted slope between consecutive IBIs that Zamm and colleagues \cite{zamm2018musicians} observed when musicians performed a melody without a metronome, starting at a tempo faster or slower than the SMT (Fig~\ref{fig3}A and Fig~\ref{fig3}B). ASHLE's approximation of the data is not perfect, but it is close. This is because the parameters $\lambda_1$ and $\lambda_2$ were optimized to simulate the data in experiment 1 and the same values were used in experiment 2. Hence, our results in this second experiment show that the values for $\lambda_1$ and $\lambda_2$ can generalize to simulate data across different datasets. There was only one ASHLE parameter that we optimized based on the musician data from experiment 2. This was the $\gamma$ parameter (see model optimization of experiment 2, in the methods section). In experiment 2 there is no sinusoidal stimulus ($F=0$) and $\gamma$ in Eq \eqref{eq:3.5} controls how quickly ASHLE's frequency returns to the natural frequency. $\gamma = 0.02$ was the value that resulted in the best fit between ASHLE's simulation results and the musician data results. The small $\gamma=0.02$ value can be explained by looking at the musician data in Fig~\ref{fig3}A. Musician's mean adjusted slope values are relatively small for all experimental conditions. These small values result from musicians showing a tendency to very slowly return to their SMT throughout the musical performance. That is why the value of $\gamma$ is very small compared to $\lambda_1=4$ and $\lambda_2=2$. Hence, $\gamma$ is the ASHLE parameter that represents a musician's tendency to return to their SMT in the absence of stimulation. It is relatively small because part of musical training consists in being able to maintain an arbitrary tempo throughout a musical performance \cite{fine2009memory, schultz2019roles}.
 
-\paragraph*{S1 Table.}
-\label{S1_Table}
-{\bf Lorem ipsum.} Maecenas convallis mauris sit amet sem ultrices gravida. Etiam eget sapien nibh. Sed ac ipsum eget enim egestas ullamcorper nec euismod ligula. Curabitur fringilla pulvinar lectus consectetur pellentesque.
+Theoretical models of musical tempo suggest entrainment of periodic neural activity with periodic actions \cite{large1999dynamics}, but the mean adjusted slope results by Zamm and colleagues \cite{zamm2018musicians} also suggests that the motor system, while maintaining the musical tempo, is constantly influenced by biomechanical and neural constraints that could give rise to the SMT \cite{goodman2000advantages}. Evidence from synchronization-continuation tasks suggest the existence of a physical and likely anatomical force pulling human periodic actions to the SMT in the absence of an external stimulus \cite{yu2003task, mcauley2006time}. Our simulations reflect that the same mechanisms to maintain a tempo are at play in experiment 1 and 2. However, the presence of a stimulus in experiment 1 resulted in maintaining the tempo and the observation of an MA between the musician and the metronome. In contrast, the lack of stimulus in experiment 2 results in the musician slowly returning to the SMT.
+
+As in experiment 1, the ASHLE model from experiment 2 was deterministic. The standard errors in our simulation results (Fig~\ref{fig3}B) are different from the standard errors in the musician results (Fig~\ref{fig3}A). As we discussed in experiment 1, the results have two sources of activity: variability in each individual musician's actions and variability between musicians. Our simulations only capture the variability between musicians by using different natural frequency values to simulate different musician's SMTs. ASHLE's lack of variability in its activity suggest that the variability in each individual musician's actions also contributes to the standard error observed in Fig~\ref{fig3}. Our simulations of experiment 2 show that ASHLE is a good model to approximate the slope between consecurive IBIs, but not the variability observed when musicians try to maintain the tempo in a solo setting without a pacing metronome.
+
+ASHLE also made testable predictions of unpaced musician performance in a solo setting. Fig~\ref{fig3}C shows predictions at the individual musician level simulating the mean adjusted slope that musicians with different SMT would produce when performing a melody starting at various tempi that are faster or slower than the SMT. ASHLE can be used to make predictions about a musician with any SMT, and such predictions can be empirically tested to further validate ASHLE's behavior.
+
+\subsection*{Experiment 3: Duet musical performance between musicians with matching or mismatching SMTs}
+
+ASHLE was able to simulate the mean absolute asynchrony between the beat of musician duets (with matching or mismatching SMTs) that performed a simple melody (Fig~\ref{fig4}A and Fig~\ref{fig4}B). With the exception of the type of stimulation (which was different between all three experiments) we used the same ASHLE model parameters in experiments 1, 2, and 3. By carrying out experiment 3, our goal was to show that ASHLE can capture musical performance behavior not just in solo settings, but also in a duet setting. To capture the data of experiment 3, it was necessary to add noise to ASHLE's action oscillator (see model optimization in the methods section). Without the gaussian noise, ASHLE showed the same qualitative pattern of results, but with a noticeable difference in magnitude between the musician mean absolute asynchrony and ASHLE's (see Fig~\ref{fig5}). Adding noise to ASHLE's effector significantly improved ASHLE's approximation of the human data (Fig~\ref{fig4}A and Fig~\ref{fig4}B). More specifically, the added noise results in ASHLE a better approximation of the magnitude of the mean absolute asynchrony in the musician duets. Across all simulations, the standard error in ASHLE's results is very similar to the standard error displayed by the human data. While we could have changed parameter values to achieve a perfect match between ASHLE's simulations and the musician activity for all experimental conditions, our goal was to identify the best set of parameter values that could capture the activity across different musician experiments.
+
+\begin{figure}[!h]
+\caption{{\bf Simulation without noise of the mean absolute asynchrony between two musicians with matching or mismatching SMTs during duet musical performance.} Our simulation results showing the mean absolute asynchrony between two synchronizing ASHLE models with matching or mismatching natural frequency, but no noise added to Eq \eqref{eq:3.7}. The resulting mean absolute asynchronies in this simulation without noise are much smaller compared to the musician data results in Fig~\ref{fig4}A. The added noise in Eq \eqref{eq:3.9} improves the model's results, which are shown in Fig~\ref{fig4}B.}
+\label{fig5}
+\end{figure}
+
+ASHLE was able to simulate the solo performance results in experiments 1 and 2 with a deterministic model. However, noise was necessary to simulate the duet performance results in experiment 3. This makes sense as the musical performance task in experiment 3 involves more sources of variability than the tasks in experiments 1 and 2. While only one musician performs in experiments 1 and 2, in experiment 3 there are two performing musicians receiving feedback from each other. The variability in musician behavior noticeably influences the absolute asynchrony between two musicians performing as a duet. ASHLE's need for noise in its action oscillator reveals that the variability in musician behavior at the individual level is a significant contributor to the mean absolute asynchrony in experiment 3. Without noise, ASHLE simulated a mean absolute asynchrony around 2ms and 18ms for the duets with matching and mismatching SMTs, respectively. When noise was added, ASHLE showed a mean absolute asynchrony around 10ms and 20ms for the duets with matching and mismatching SMTs, respectively. Hence, the presence of noise is needed to capture musical duet behavior, especially when the two musicians have matching SMTs.
+
+To simulate this musical duet task, we also needed a significantly smaller connection strength (see model optimization in the methods section) between the two ASHLE models stimulating each other. This difference in stimulus strength between experiment 1 and experiment 3 is due to the nature of the stimulus. With unidirectional forcing, a large forcing strength helps achieving phase-locked synchronization between a dynamical system and a stimulus \cite{kim2015signal}. This is very different when two or more dynamical systems stimulate each other, like the two ASHLE models stimulating each other in experiment 3. Previous studies of stability between dynamical systems have revealed that small forcing strengths between dynamical systems ensure the stability of their periodic behavior \cite{kim2015signal}.
+
+ASHLE also made testable predictions about how musician duets would perform in new experimental manipulations. Fig~\ref{fig4}C shows predictions for the mean absolute asynchrony that one would observe between two musicians, one with a specific SMT, and the other with an SMT that differs by a specific value from the other musician's SMT. These predictions show that the mean absolute asynchrony between the two musicians will generally vary as a function of the difference between the musician's SMTs, and also as a function of the specific SMT value in either of the two musicians. ASHLE can be used to make predictions about musician duets with any SMTs, and such predictions can be empirically tested to further validate ASHLE's behavior.
+
+\subsection*{General discussion}
+
+We have presented the ASHLE model, which captures how the musical tempo is maintained during various simple performance tasks. In experiment 1, ASHLE captured the MA between a musician's beats and metronome beats during a simple melody performance task (Fig~\ref{fig2}). In experiment 2, ASHLE captured the rate of beat change when a solo musician performed a simple melody without a metronome (Fig~\ref{fig3}). And in experiment 3, ASHLE captured the mean absolute asynchrony between the beat of two musicians performing a simple melody as a duet (Fig~\ref{fig4}). ASHLE was able to capture these three different tasks using the same set of parameters for its intrinsic dynamics (see parameter analysis and model optimization in the methods section). Our simulations validate ASHLE's ability to simulate real musician data. Hence, ASHLE is a model with a mechanisms of elastic Hebbian frequency learning that generalizes across different tasks and different datasets. We also used ASHLE to make testable predictions of musician performance data not yet collected (Fig~\ref{fig2}B, Fig~\ref{fig2}C, Fig~\ref{fig3}C, and Fig~\ref{fig4}C). Future behavioral studies can collect this data to validate ASHLE as a model able to capture musician performance. More data collected could also help to better fine tune ASHLE's parameters in case ASHLE, in its current sate, cannot sufficiently predict new musician data.
+
+ASHLE is the first model with the interacting forces of Hebbian frequency learning and elasticity pulling toward a systems natural frequency to be applied to asynchrony data. Previous models have focused on explaining the origin of the negative mean asynchrony (NMA), which is a specific type of asynchrony when the synchronizing agent's actions anticipate the pacing signal (i.e., a metronome). The first kind of these models propose that the NMA is the result of adaptive synchronization by means of phase and period correction rules at phenomenological \cite{van2013adaptation} and neuromechanistic levels \cite{bose2019neuromechanistic}. Another kind of model, called strong anticipation models, propose that the NMA is the result of delayed feedback \cite{stepp2010strong} and, in the case of humans, the NMA has been theorized to emerge from delayed neural communication in the sensorimotor system \cite{roman2019delayed}. ASHLE can capture both the NMA and the positive MA using the same fundamental principles of adaptive frequency learning and elastic force. In humans, the NMA is observed when synchronizing with a metronome tempo with an IOI larger than 350ms \cite{mates1994temporal}. Interestingly, the average human SMP is around 400ms. As a result, the human NMA in ASHLE emerges from a force pulling the human tempo to the SMT during adaptive synchronization with a slower stimulus. However, there are similarities between ASHLE and models of strong anticipation to explain the NMA as resulting from delayed feedback \cite{stepp2010strong, roman2019delayed}. Both ASHLE and strong anticipation models are based on physical principles. Future work should try to combine ASHLE and the strong anticipation model of human anticipation to achieve a comprehensive model of adaptive and anticipatory activity in human behavior.
+
+We have presented a versatile, neuroscientifically-inspired, and ecologically valid model of adaptive musical beat performance for solo and duet settings. ASHLE is a model that can capture adaptive human synchronization based on dynamical principles. ASHLE could be used not just to simulate human data and predict human behavior, but also as a tool with which humans can interact in experimental, musical, and therapy settings. ASHLE is the first model of its kind, and provides us with a better understanding about how Hebbian frequency learning in the motor cortex interacts with the elastic and dynamical constraints that give rise to the SMT.
+
+\section*{Methods}
+
+\subsection*{Model definition}
+
+\subsubsection*{Theoretical background}
+
+A non-linear oscillator with a natural frequency $f_1$ can synchronize with another oscillator or an arbitrary periodic signal of frequency $f_2$ if $|f_1 - f_2| < \epsilon$, where $\epsilon$ is small compared to $f_1$ and $f_2$. Synchronization also requires the synchronizing oscillator (or oscillators) to have properly defined parameter values because if any of these parameters is outside the oscillator's phase-locking regime, synchronization will fail \cite{righetti2006dynamic}. To overcome the limitation of fixed parameters, studies have shown that oscillator parameters can be defined dynamically by a differential equation \cite{large1994resonance, large1999dynamics, acebron1998adaptive, borisyuk2001oscillatory, ermentrout1991adaptive, nakanishi2003learning, nishii1999learning, righetti2006dynamic}. Because the natural frequency is critical to determine an oscillator's phase-locking regime, Righetti and colleagues \cite{righetti2006dynamic} defined an equation that allows a limit-cycle oscillator to dynamically adapt its frequency to match the rate of periodic activity of an arbitrary stimulus and phase-lock.
+
+\begin{equation}
+\dot{f} = -\lambda x(t) \sin(\phi) \label{eq:3.1}
+\end{equation}
+
+In Eq \eqref{eq:3.1}, $f$ is an oscillator's natural frequency in hertz, $\lambda$ is the learning rate (or the adaptation timescale for $f$), $x(t)$ is an arbitrary stimulus, and $\phi$ is the oscillator's phase \cite{righetti2006dynamic}. Because $f$ is a real-valued term, the stimulus $x(t)$ is assumed to be a real signal, but if it were complex-valued, only the real part of $x(t)$ would be needed to observe the adaptive frequency behavior (the imaginary part can also be used. See the ASHLE model definition for this equation). Hence, to process a complex-valued stimulus, Eq \eqref{eq:3.1} would have the following form:
+
+\begin{equation}
+\dot{f} = -\lambda \Re \{ x(t) \sin(\phi) \} \label{eq:3.2}
+\end{equation}
+
+Eq \eqref{eq:3.2} allows a non-linear oscillator to dynamically adapt its frequency to phase-lock with a periodic stimulus (by synchronizing only with its real part) of an arbitrary frequency \cite{righetti2006dynamic}. However, Eq \eqref{eq:3.2} does not have memory of its initial conditions for the frequency term, so after stimulation the oscillator's frequency $f$ will remain in its learned state and will not return to the oscillator's original natural frequency. Lambert and colleagues \cite{lambert2016adaptive} envisioned an oscillator able to adapt its frequency elastically so that the oscillator would return to its natural frequency in the absence of stimulation. Eq \eqref{eq:3.3} describes this elastic frequency learning rule:
+
+\begin{equation}
+\dot{f} = -\lambda_1 \Re \{ x(t) \sin(\phi) \} - \lambda_2 \frac{f-f_0}{f_0} \label{eq:3.3}
+\end{equation}
+
+In Eq \eqref{eq:3.3}, $\lambda_1$ is the frequency learning rate from Eq \eqref{eq:3.2} and $\lambda_2$ is the elastic force pulling the oscillator's $f$ back to $f_0$, which is a fixed value representing the oscillator's natural frequency. $\lambda_2$ multiplies the difference between $f$ and $f_0$. Thus, the new term $−\lambda_2 \frac{f-f_0}{f_0}$ is equivalent to Hooke's law, which states that the force needed to extend a spring is linearly scaled by the distance resulting from such extension \cite{lambert2016adaptive}. As $f$ and $f_0$ differ in value due to a stimulus $x(t)$ that changes the adaptive frequency term $-\lambda_1 \Re \{ x(t) \sin(\phi) \}$, the system's elastic energy demand increases. Only the stimulus $x(t)$ can supply this energy demand, and in the absence of a stimulus, the system will make $f = f_0$, which is the state with the lowest elastic energy demand. Lambert and colleagues \cite{lambert2016adaptive} used Eq \eqref{eq:3.3} to create networks of oscillators with different $f_0$ values. This network allowed them to dynamically find pulse and meter in musical signals \cite{lambert2016adaptive}.
+
+To use Eq \eqref{eq:3.3} we need to combine it with an oscillatory dynamical system. Because we want to simulate periodic synchronization, we use the canonical Hopf oscillator described by Large and colleagues that can synchronize with an external periodic stimulus \cite{large2010canonical, kim2015signal}. The oscillator that we will use has the following general form:
+
+\begin{equation}
+\frac{1}{f}\dot{z} = z\bigg(\alpha + i2\pi + \beta_1|z|^2 + \frac{\epsilon\beta_2|z|^4}{1-\epsilon|z|^2}\bigg) + x(t) \label{eq:3.4}
+\end{equation}
+
+In Eq \eqref{eq:3.4} $z$ is the state of the oscillator, and $\alpha$, $\beta_1$ and $\beta_2$ are fixed parameters that control the dynamics of the oscillator. $f$ determines the rate of oscillation and $\epsilon$ is a parameter that controls the degree of higher-order nonlinear activity in the oscillator. $x(t)$ is an arbitrary stimulus. This oscillator is derived from a biological model of neural oscillation and can capture neural synchronization observed in real neurons and sensory processing \cite{lerud2019canonical, tal2017neural}. Moreover, a single oscillator can show stable oscillatory activity, even after it is no longer being stimulated, hence showing ``memory" \cite{kim2015signal}. We want to simulate a musician's SMT, so we only need one oscillator with a fixed $f_0$ value. This contrasts with the models described by Large and colleagues \cite{large2010canonical}, who used a network of oscillators with different natural frequency values.
+
+\subsubsection*{The ASHLE model}
+
+Eqs \eqref{eq:3.5}, \eqref{eq:3.6}, \eqref{eq:3.7}, and \eqref{eq:3.8} show the ASHLE model:
+
+\begin{subequations}
+\begin{align}
+\frac{1}{f_p}\dot{z}_p &= z_p\left( \alpha + i2\pi + \beta|z_p|^2 \right) + Fx(t) \label{eq:3.5} \\
+\dot{f}_p &= f_p \left(-\lambda_1\Re\left( iFx(t)\exp(-i\angle z_p) \right) - \gamma\left( \exp\left(\frac{f_p-f_a}{f_a}\right)-1 \right) \right) \label{eq:3.6} \\
+\frac{1}{f_a}\dot{z}_a &= z_a \left( \alpha + i2\pi + \beta|z_a|^2 \right) + \exp(i \angle z_p) \label{eq:3.7} \\
+\dot{f}_a &= f_a \left( -\lambda_1\Re \left( i\exp(i \angle z_p)\exp(-i\angle z_a) \right) - \lambda_2 \left( \exp\left(\frac{f_a-f_0}{f_0}\right)-1 \right) \right) \label{eq:3.8}
+\end{align}
+\end{subequations}
+
+Eqs \eqref{eq:3.5} and \eqref{eq:3.7} are oscillators like the one in Eq \eqref{eq:3.4}, but with $\beta_1 = \beta$, $\beta_2=0$, $\epsilon=0$. Eqs \eqref{eq:3.5} and \eqref{eq:3.6} have a subscript p that stands for ``perception", while Eqs \eqref{eq:3.7} and \eqref{eq:3.8} have a subscript a that stands for ``action". In all of our simulations $\alpha=1$ and $\beta=-1$ so that the intrinsic dynamics of Eqs \eqref{eq:3.5} and \eqref{eq:3.7} are those of limit-cycle oscillators. In the absence of stimulus (i.e., when $F = 0$), Eqs \eqref{eq:3.5} and \eqref{eq:3.7} will show spontaneous and perpetual oscillation \cite{kim2015signal}. Eqs \eqref{eq:3.6} and \eqref{eq:3.8} are the frequency learning equations for Eq \eqref{eq:3.5} and Eq \eqref{eq:3.7}, respectively. Eq \eqref{eq:3.6} has a frequency learning terms $-\lambda_1\Re\left( iFx(t)\exp(-i\angle z_p) \right)$ and a slow term $-\gamma\left( \exp\left(\frac{f_p-f_a}{f_a}\right)-1 \right)$. The first one learns the frequency of the external stimulus $Fx(t)$, while the second one allows for a slow return to the natural frequency because the parameter $\gamma$ always has a value smaller than $\lambda_1$ and $\lambda_2$. So the slow timescale in \eqref{eq:3.6} is negligible in the presence of a stimulus $Fx(t)$. This slow term is only important when $F = 0$. The two frequency learning terms in Eq \eqref{eq:3.6} control learning of the stimulus frequency and forgetting of an entrained frequency, respectively (see parameter analysis in the next subsection). Eq \eqref{eq:3.8} is similar to the one described by Eq \eqref{eq:3.3}, which contained a frequency learning and an elasticity term. However, in contrast with Eq \eqref{eq:3.3}, Eq \eqref{eq:3.8} has an exponential elasticity term to better cope with the exponential nature of the hertz scale of terms $f_a$ and $f_0$. The first term in Eq \eqref{eq:3.8} carries out entrained frequency tracking while the second one is the pulling force moving ASHLE's frequency toward the natural frequency. Eqs \eqref{eq:3.6} and \eqref{eq:3.8} share the $\lambda_1$ parameter. While the value of $f_0$ may change between different simulations that we carried out, the values of $\lambda_1$ and $\lambda_2$ are always fixed across all our simulation experiments (see parameter analysis and model optimization in the upcoming sections to understand how we picked the values for these two parameters).
+
+This model is inspired by neuroscientific hypotheses about processes involved during perception-action coordination \cite{large2015neural}. Eqs \eqref{eq:3.5} and \eqref{eq:3.6} simulate entrainment in cortico-subcortical motor brain areas when processing a periodic stimulus of an arbitrary frequency \cite{daly2014changes, grahn2009feeling, grahn2013finding}. That is why Eq \eqref{eq:3.5} shows sustained oscillatory activity even after a stimulus is no longer present, simulating neural entrainment to the musical beat \cite{large2015neural}. Eqs \eqref{eq:3.7} and \eqref{eq:3.8} simulate the motor system processing the entrained beat information to control peripheral effectors (i.e., a finger playing a piano) during a musical performance task. Eqs \eqref{eq:3.6} and \eqref{eq:3.8} simulate the frequency learning rules of central and peripheral motor function. Because of how ASHLE processes a stimulus, Eqs \eqref{eq:3.5} and \eqref{eq:3.6} simulate how the neurons entrain to a periodic stimulus, while Eqs \eqref{eq:3.7} and \eqref{eq:3.8} captures how the motor system converts this encoded information into a motor command to effectors.
+
+While Eq \eqref{eq:3.5} is driven by an external stimulus $Fx(t)$, Eq \eqref{eq:3.7} is driven by a unit-magnitude complex sinusoid with the angle of Eq \eqref{eq:3.5}. The input $x(t)$ to ASHLE in Eq \eqref{eq:3.5} will be a complex sinusoid to simulate musical performance paced by a metronome, zero to simulate spontaneous musical performance, or the state of another ASHLE's $z_a$ term to simulate duet musical performance using two synchronizing ASHLE models.
+
+\subsection*{Parameter analysis}
+
+Eqs \eqref{eq:3.5}, \eqref{eq:3.6}, \eqref{eq:3.7}, and \eqref{eq:3.8} describe the ASHLE model. Eqs \eqref{eq:3.5} and \eqref{eq:3.7} are the Hopf oscillator described by Large and colleagues \cite{large2010canonical}. Previous studies have investigated how such an oscillator synchronizes with a periodic external stimulus in a phase-locked fashion \cite{kim2015signal}. For that reason, we focus on analyzing how the parameters $\lambda_1$, $\lambda_2$ and $\gamma$ in Eqs \eqref{eq:3.6} and \eqref{eq:3.8} affect synchronization with a periodic stimulus. Throughout this chapter, we fixed parameters $\alpha=1$ and $\beta=-1$. This choice of parameter values causes Eqs \eqref{eq:3.5} and \eqref{eq:3.7} to show spontaneous unit-magnitude limit-cycle behavior \cite{kim2015signal}. In our first and second analysis we use values of $F = 1$ (like in Experiment 1) and in our third analysis $F = 0$ (like in Experiment 2). The specific value of $F_z = 0.01$ that we used in Experiment 3 is described in the model optimization section specific to the Experiment 3 methods section. In the first and second analysis, the external stimulus $x(t)$ was always a unit magnitude complex sinusoid, so $x(t) = \exp(i2\pi f_s t)$, where $f_s$ is the stimulus frequency in hertz and $t$ is time. For all simulations in this analysis, ASHLE's natural frequency $f_0 = 2.5$ because the average musician SMP is around 400ms in previous behavioral studies ($f_0 = \frac{1000\text{ms}}{400\text{ms}}=2.5\text{Hz}$) \cite{scheurich2018tapping, zamm2018musicians, zamm2016endogenous}.
+
+We first analyzed how $\lambda_1$ and $\lambda_2$ affect the phase-locked asynchrony between the stimulus $x(t)$ and ASHLE's $z_a$ (which simulates control of peripheral effectors) when the stimulus period is 45\% shorter ($f_s = \frac{1000\text{ms}}{0.55 \times 400\text{ms}}$) and 45\% longer ($f_s = \frac{1000\text{ms}}{1.45 \times 400\text{ms}}$) than ASHLE's period of natural frequency. We ran different simulations, each with a unique value for $\lambda_1$ and $\lambda_2$. In all simulations, ASHLE and $x(t)$ interacted for 50 seconds with initial conditions $z_p(0)=z_a(0)=0.001 + i0$. In Eq \eqref{eq:3.6}, the parameter $\gamma=0$ because we do not want to study the effect of this small parameter in this first analysis (see our third parameter analysis below to understand how $gamma$ affects ASHLE's behavior). After each simulation finished, we found the location (in milliseconds) of local maxima (i.e., peaks) in the real part of the oscillatory activity of $x(t)$ and $z_a$ (Fig~\ref{fig6}A). Then, we subtracted the location of the peaks of $x(t)$ from the location of the peaks of $z_a$ and averaged the result to obtain the mean asynchrony in milliseconds. If $x(t)$ and $z_a$ showed a different number of peaks, that indicated that phase-locked synchronization did not occur between the two. Fig~\ref{fig6}B and Fig~\ref{fig6}C show the result of this analysis as a function of $\lambda_1$ and $\lambda_2$ when $f_s$ (the frequency of the stimulus) has a period 45\% shorter ($f_s = 4.5$; Fig~\ref{fig6}B) and 45\% longer ($f_s = 1.72$; Fig~\ref{fig6} than ASHLE's period of natural frequency. This analysis revealed that phase-locked synchronization does not occur for certain combinations of $\lambda_1$ and $\lambda_2$ values (black cells in Fig~\ref{fig6}B and Fig~\ref{fig6}C). Interestingly, when $\lambda_1=0$, phase-locked synchronization is never possible. This makes sense, since $\lambda_1$ is the frequency learning rate that allows ASHLE to change its frequency to match the frequency of $x(t)$. When $\lambda_1=0$, phase-locked synchronization can only occur between ASHLE and a stimulus with a frequency that is close to ASHLE's natural frequncy (see the study by Kim and Large \cite{kim2015signal} for a detailed analysis of this kind of synchronization in the absence of a frequency learning rule). This analysis also revealed that as the value of $\lambda_2$ becomes larger, phase-locked synchronization may not be observed (depending on the value of $\lambda_1$) because ASHLE's frequency terms $f_p$ and $f_a$ are pulled strongly to the natural frequency $f_0$. The values of $\lambda_1$ and $\lambda_2$ modulate the size of the asynchrony. As $\lambda_1$ becomes larger, the magnitude of the asynchrony between $z_a$ and $x(t)$ tends to decrease and is sometimes close to zero when $\lambda_2=0$. The opposite occurs when $\lambda_2$ grows. This observation reveals that $\lambda_1$ and $\lambda_2$ work in opposing directions. While $\lambda_1$ changes the model's frequency to match the stimulus frequency, $\lambda_2$ pulls ASHLE's to $f_0$. Moreover, as ASHLE's frequency deviates from $f_0$, $\lambda_2$ acts with more strength, while the strength of $\lambda_1$ is not directly affected by the difference between $f_0$ and ASHLE's frequency. Additionally, when synchronization is observed between ASHLE and the stimulus $x(t)$, the sign of the asynchrony between $z_a$ and $x(t)$ is affected by whether $x(t)$ is faster or slower than ASHLE's natural frequency, with a tendency be positive (lagging behavior) and negative (anticipatory behavior), respectively.
+
+\begin{figure}[!h]
+\caption{{\bf The asynchrony between ASHLE and a sinusoid with period 45\% shorter or longer than ASHLE's period of natural frequency, as a function of frequency learning and elasticity parameters.} (A) Illustration of the asynchrony between ASHLE's $z_a$ and the external sinusoidal stimulus, and how it is measured. (B) The asynchrony in milliseconds between ASHLE and a sinusoidal stimulus with a period 45\% shorter than ASHLE's period of natural frequency, and its change as a function of $\lambda_1$ and $\lambda_2$, which are ASHLE's parameters for frequency learning and elasticity, respectively. (C) The asynchrony in milliseconds between ASHLE and a sinusoidal stimulus with a period 45\% shorter than ASHLE's period of natural frequency, and its change as a function of $\lambda_1$ and $\lambda_2$ values. Black cells indicate $\lambda_1$ and $\lambda_2$ value pairs for simulations where ASHLE and the sinusoidal stimulus could not synchronize.}
+\label{fig6}
+\end{figure}
+
+Our second analysis focused on narrowing down our search for parameter values for $\lambda_1$ and $\lambda_2$ that result in asynchronies in the range observed in human data. In the experiment by Scheurich and colleagues \cite{scheurich2018tapping}, musicians synchronized with a stimulus period that is 15\% or 30\% shorter or longer than their SMP to measure the mean adjusted asynchrony (which is equal to the MA observed during performance with a metronome tempo different from the musician SMT, minus the MA measured during performance with an metronome matching the musician SMT). Musicians showed mean adjusted asynchrony values in the range of -10ms and 10ms (see Fig~\ref{fig2}A). In this analysis we ran simulations where ASHLE was stimulated by a different stimulus frequency to measure the MA between an ASHLE model with an $f_0 = 2.5$ (same as our first analysis) and a sinusoidal stimulus $x(t) = \exp(i2\pi f_s t)$ with six potential period lengths: 45\% shorter ($f_s = \frac{1000\text{ms}}{0.55 \times 400\text{ms}}$), 30\% shorter ($f_s = \frac{1000\text{ms}}{0.70 \times 400\text{ms}}$), 15\% shorter ($f_s = \frac{1000\text{ms}}{0.85 \times 400\text{ms}}$), 15\% longer ($f_s = \frac{1000\text{ms}}{1.15 \times 400\text{ms}}$), 30\% longer ($f_s = \frac{1000\text{ms}}{1.30 \times 400\text{ms}}$), and 45\% longer ($f_s = \frac{1000\text{ms}}{1.45 \times 400\text{ms}}$) than ASHLE's period of natural frequency. In our first parameter analysis, we noticed that values for $\lambda_1$ between 3 and 5, and $\lambda_2$ between 1 and 3 could result in MA values in the range of the mean adjusted asynchrony observed in humans (Fig~\ref{fig6}B and Fig~\ref{fig6}C). In this analysis we refine our search for $\lambda_1$ and $\lambda_2$ in this range of values. We ran simulations in a similar fashion to our first analysis. ASHLE and the sinusoidal stimulus interacted for 50 seconds. ASHLE had initial conditions $z_p(0)=z_a(0)= 0.001 + i0$ and $f_p(0)=f_a(0)=f_0$. In Eq \eqref{eq:3.6} the parameter $\gamma=0$ because we want this term to be negligible when a stimulus is present. For each simulation, we found the location (in milliseconds) of the local maxima in the real part of the oscillatory activity of ASHLE's $z_a$ and $x(t)$. Then, we subtracted the location of the peaks of $x(t)$ from the location of the peaks of $z_a$ and averaged the result to obtain the MA in milliseconds. If $z_a$ and $x(t)$ showed a different number of peaks, that indicated that phase-locked synchronization did not occur between the two. Fig~\ref{fig7} shows the result of this analysis. Each subplot shows the asynchrony between $z_a$ and $x(t)$ for a different stimulus frequency and a pair of parameter values of $\lambda_1$ and $\lambda_2$. This analysis revealed that the values of $\lambda_1 = 4$ and $\lambda_2 = 2$ result in the range of MA values observed in humans. This analysis, however, focused on finding parameter values so that ASHLE can capture paced musician synchronization. We also want ASHLE to be able to capture musician behavior during unpaced musical performance, so carried out a third parameter analysis to understand ASHLE's behavior in the absence of a stimulus.
+
+\begin{figure}[!h]
+\caption{{\bf The asynchrony between ASHLE and a sinusoid faster or slower than ASHLE's natural frequency as a function of a narrower range of values for the frequency learning and elasticity parameters.} Each cell shows the MA between ASHLE and a sinusoidal stimulus with a period 45\% shorter, 30\% shorter, 15\% shorter, 15\% longer, 30\% longer, and 45\% longer than ASHLE's period of natural frequency, for a pair of values for $\lambda_1$ and $\lambda_2$, which are ASHLE parameters for frequency learning and elasticity, respectively. The pair of $\lambda_1=4$ and $\lambda_2=2$ yield MA values similar to the ones that Scheurich and colleagues \cite{scheurich2018tapping} observed in musicians synchronizing with a metronome period 30\% shorter, 15\% shorter, 15\% longer, and 30\% longer than the musician's SMP.}
+\label{fig7}
+\end{figure}
+
+In our third parameter analysis we observed how, in the absence of an external stimulus (i.e., $F = 0$), the parameter $\gamma$ affects the return of ASHLE to $f_0$ when the initial values of $f_p$ and $f_a$ are different than $f_0$. This situation would occur in simulations where ASHLE learned a frequency different than its $f_0$ from a stimulus and then stimulus stops, or if $f_p(0)$ and $f_a(0)$ are set to initial conditions different than $f_0$ in the absence of a stimulus. In the experiment by Zamm and colleagues \cite{zamm2018musicians}, musicians spontaneously started performing at a tempo faster or slower than their SMTs. A linear regression of the consecutive IBI lengths resulted in a slope that revealed that musicians progressively shrank or widened consecutive IBIs, indicating a tendency to return to their SMP. In this experiment musicians showed mean adjusted slope values in the range of -0.2 and 0.1 (see Fig~\ref{fig3}). To simulate this behavior, we need to identify the value of $\gamma$ that will result in similar slope values between consecutive IBIs. In this analysis ASHLE has an natural frequency $f_0= 2.5$ (same as in the previous two analyses) and in different simulations the initial conditions for $f_p(0)$ and $f_a(0)$ were set to one of four different values: periof 45\% shorter ($f_p(0) = f_a(0) = \frac{1000\text{ms}}{0.55 \times 400\text{ms}}$), 30\% shorter ($f_p(0) = f_a(0) = \frac{1000\text{ms}}{0.70 \times 400\text{ms}}$), 15\% shorter ($f_p(0) = f_a(0) = \frac{1000\text{ms}}{0.85 \times 400\text{ms}}$), 15\% longer ($f_p(0) = f_a(0) = \frac{1000\text{ms}}{1.15 \times 400\text{ms}}$), 30\% longer ($f_p(0) = f_a(0) = \frac{1000\text{ms}}{1.30 \times 400\text{ms}}$), and 45\% longer ($f_p(0) = f_a(0) = \frac{1000\text{ms}}{1.45 \times 400\text{ms}}$) than ASHLE's period of natural frequency. In all simulations there was no external stimulus (i.e., $F = 0$). We analyzed the behavior of ASHLE for $\gamma$ values of $0.01$, $0.02$, $0.04$, $0.08$. In each simulation, ASHLE oscillated for 50 seconds with initial conditions $z_p(0)=z_a(0)=0.001 + i0$. After each simulation, we found the location (in milliseconds) of the local maxima in the real-part of the oscillatory activity of $z_a$. Then we found the difference between consecutive local maxima to obtain a sequence of IBIs. Finally, we calculated the linear regression between consecutive IBIs to obtain the resulting slope. Fig~\ref{fig8} shows the results of this analysis. Each subplot shows the slopes obtained with different $\gamma$ values and different initial conditions for $f_p(0)$ and $f_a(0)$. This analysis revealed that a value around $\gamma= 0.02$ will match the range of slope values observed in human data.
+
+\begin{figure}[!h]
+\caption{{\bf ASHLE slope values as a function of $\gamma$ and initial frequency in the absence of a stimulus.} The effect of the $\gamma$ parameter on the slope values between consecutive period lengths when ASHLE oscillates without a pacing stimulus, starting at a frequency that has a period 45\% shorter ($f_s = \frac{1000\text{ms}}{0.55 \times 400\text{ms}}$), 30\% shorter ($f_s = \frac{1000\text{ms}}{0.70 \times 400\text{ms}}$), 15\% shorter ($f_s = \frac{1000\text{ms}}{0.85 \times 400\text{ms}}$), 15\% longer ($f_s = \frac{1000\text{ms}}{1.15 \times 400\text{ms}}$), 30\% longer ($f_s = \frac{1000\text{ms}}{1.30 \times 400\text{ms}}$), and 45\% longer ($f_s = \frac{1000\text{ms}}{1.45 \times 400\text{ms}}$) than ASHLE's period of natural frequency.}
+\label{fig8}
+\end{figure}
+
+\subsection*{Experiment 1: Solo music performance with a metronome tempo different than the SMT}
+
+\subsubsection*{Behavioral data for simulation}
+
+In the task by Scheurich and colleagues \cite{scheurich2018tapping}, 20 musicians individually performed a simple melody while synchronizing with a metronome in four experimental conditions: metronome period 30\% shorter, 15\% shorter, 15\% longer, and 30\% longer than their SMP. For each metronome rate, participants performed the melody ("Mary had a little lamb") four consecutive times (32 beats per repetition, 128 beats total). Experimenters measured the mean adjusted asynchrony between the participant beats and the metronome clicks during the middle two melody repetitions (64 beats total). The mean adjusted asynchrony is the MA observed when the musician performs with a metronome tempo different than the musician's SMT, minus the MA observed when the musician performs with a metronome that matches the SMT. Scheurich and colleagues \cite{scheurich2018tapping} used the mean adjusted asynchrony instead of the MA to assume in their analysis that no MA exists between the musician and the metronome that matches the SMT. Fig~\ref{fig2}A shows the behavioral data with the mean adjusted asynchrony (average and standard error) observed across all 20 musicians for each experimental metronome tempo condition. Their results showed that the mean adjusted asynchrony had a tendency to be positive when synchronizing with a metronome faster than the SMT (musician actions lagging the metronome), and negative when synchronizing with a metronome slower than the SMT (musicians actions anticipating the metronome). Additionally, the mean adjusted asynchrony grew as a function of the difference between musician SMT and experimental metronome tempo.
+
+\subsubsection*{Setup, procedures and measurements}
+
+To obtain the musicians SMPs, we overlaid a grid over figure 4 from the paper by Scheurich and colleagues \cite{scheurich2018tapping}, which showed each musician's measured SMP (in their original paper, the authors mistakenly call the SMP as the `SPR'). Using this grid over the original figure allowed us to precisely digitize each musician's SMP from the original publication. Using the musician SMP values, we simulated 20 different ASHLE models, all with the same parameter values (see model optimization below) except for the natural frequency, which has a periof that matched the SMP of a different musician. ASHLE does not generate pitch, so it only simulates the beats of the melody that musicians performed, not the melody or harmony content. This is not a problem, however, since Scheurich and colleagues only analyzed each musician's beat performance. In all simulations, initial conditions were $z_p(0)=z_a(0)= 0.001 + i0$ (indicating that ASHLE's two oscillators start with zero phase), $f_p(0)=f_a(0)=f_0$ (where $f_0$ is ASHLE's natural frequencyin hertz: $f_0=\frac{1000 \text{ms}}{\text{SMPms}}$. Following the procedure in the musician experiment, each ASHLE synchronized during 128 cycles with a pacing complex-valued sinusoidal stimulus $x(t)=\exp(i2\pi f_s t)$ where $f_s$ had a period either 30\% shorter ($f_s=\frac{1000 \text{ms}}{0.7 \times \text{SMPms}}$), 15\% shorter ($f_s=\frac{1000 \text{ms}}{0.85 \times \text{SMPms}}$), 15\% longer ($f_s=\frac{1000 \text{ms}}{1.15 \times \text{SMPms}}$), or 30\% longer ($f_s=\frac{1000 \text{ms}}{1.3 \times \text{SMPms}}$) than the ASHLE's period of natural frequency. We also simulated how ASHLE would synchronize with a stimulus period 45\% shorter ($f_s=\frac{1000 \text{ms}}{0.55 \times \text{SMPms}}$) or 45\% longer ($f_s=\frac{1000 \text{ms}}{1.45 \times \text{SMPms}}$) in order to make predictions about how musicians would perform in those additional experimental conditions. After each simulation, we identified the location (in milliseconds) of local maxima in the real part of ASHLE's effector $z_a$ and the sinusoidal stimulus. Then, in each simulation we identified the middle 64 peaks for ASHLE and the stimulus and subtracted the location of stimulus peaks from ASHLE peaks to obtain the asynchrony. Averaging these asynchronies in each simulation resulted in the MA for a specific simulation. To obtain the mean adjusted asynchrony that Scheurich and colleagues used in their analysis, from each MA obtained in the experimental conditions, we subtracted the MA observed when ASHLE synchronized with a sinusoid with a frequency that matched ASHLE's natural frequency ($f_s=f_0$). We averaged the mean adjusted asynchronies observed across the 20 ASHLE models that me simulated (only different by their natural frequency value) for each stimulus period (15\%, 30\%, or 45\% shorter or longer than ASHLE's period of natural frequency) to obtain the plot in Fig~\ref{fig2}B. We also simulated how different ASHLE models with specific periods of natural frequency (linearly spaced between 350ms and 650ms) would carry out this task when synchronizing with a stimulus period that is 45\% shorter ($f_s=\frac{1000 \text{ms}}{0.55 \times \text{SMPms}}$), 30\% shorter ($f_s=\frac{1000 \text{ms}}{0.7 \times \text{SMPms}}$), 15\% shorter ($f_s=\frac{1000 \text{ms}}{0.85 \times \text{SMPms}}$), 15\% longer ($f_s=\frac{1000 \text{ms}}{1.15 \times \text{SMPms}}$), 30\% longer ($f_s=\frac{1000 \text{ms}}{1.3 \times \text{SMPms}}$), or 45\% longer ($f_s=\frac{1000 \text{ms}}{1.45 \times \text{SMPms}}$) than ASHLE's period of natural frequency. Fig~\ref{fig2}C shows the results of these simulations, which are predictions of musician data that could be collected to test the accuracy of predictions made by ASHLE.
+
+\subsubsection*{Model optimization}
+
+Our goal was to use ASHLE to simulate the results in the musician data by Scheurich and colleagues \cite{scheurich2018tapping}. In all our simulations in this experiment, some ASHLE parameters were always the same: $\alpha=1$, $\beta=-1$, and $\gamma=0.02$ (see model optimization for experiment 2 to understand how we came to this exact value for $\gamma$). The other two parameters that were always the same across simulations were $\lambda_1=4$ and $\lambda_2=2$, which we found in our parameter analysis to result in a good approximation of the musician data results by Scheurich and colleagues \cite{scheurich2018tapping}. When we carried out the simulations in this experiment, we confirmed that the values of $\lambda_1=4$ and $\lambda_2=2$ resulted in a good fit between our simulations and the musician data by Scheurich et al. \cite{scheurich2018tapping}.
+
+\subsection*{Experiment 2: Unpaced solo music performance with a starting tempo different than the SMT}
+
+\subsubsection*{Behavioral data for simulation}
+
+In the task by Zamm et al. \cite{zamm2018musicians}, 24 musicians individually performed a simple melody without listening to a metronome. In one control condition they performed the melody at their SMT, and in four other experimental conditions they performed starting at four other spontaneous tempi: fast and slow with respect to SMT, and even faster and slower with respect to the SMT. For each spontaneous initial tempo, musicians performed the melody ("Frere Jaques") four consecutive times (32 beats per repetition, 128 beats total). For each tempo, experimenters measured the IBI across each musician's entire performance and carried out a linear regression to obtain a slope, which indicates the rate of change across IOIs over the entire performance. Fig~\ref{fig3}A shows the behavioral data with the average slope across participants in each initial tempo condition. Results showed that the slope had a tendency to be positive when performances started a spontaneous tempo faster than the SMT (IBIs becoming longer as the performances progressed), and negative when performances started at a spontaneous tempo slower than the SMT (IBIs becoming shorter as the performance progressed).
+
+\subsubsection*{Setup, procedures and measurements}
+
+To obtain the musicians' SMP, we overlaid a grid over figure 1 from the paper by Zamm and colleagues \cite{zamm2018musicians}, which showed each musician's measured SMP (in their original paper, the authors mistakenly call the SMP as the `SPR'). We also overlaid a grid over figure 2 (right top panel) from the same paper by Zamm and colleagues to obtain each musician's initial rates of performance that were fast, slow, faster, and slower with respect to their SMT. Using these grids over original musician data figures allowed us to precisely recover each musician's rates of performances reported in the original study. Because our model does not generate pitch, it only simulates the beats of the melody that musicians performed, not the individual notes. Using the musicians' SMT and initial performance tempo values, we simulated 23 different ASHLE models, each oscillating with 5 different initial conditions for $f_p(0)=f_a(0)$ (matching the frequency, fast or slow compared to the SMT, and faster and slower than the SMT) (115 total simulations). We did not simulate the participant with the SMP of 665ms because its fast spontaneous tempo was signficantly faster than the rest of the particpant fast tempi, and ASHLE was not able to show stable activity as a result of this tempo difference. In all simulations in this experiment there was no stimulus ($F = 0$). All simulations shared the same parameter values (see model optimization below) except for the natural frequency (which had a period matching the SMP of a different musician) and each simulation started with the ASHLE model having different initial conditions for $f_p(0)=f_a(0)$. After each simulation, we identified the location (in milliseconds) of local maxima in the real part of ASHLE's effector $z_a$. Then, we measured the difference between consecutive peaks to analyze how IBIs change over the course of a simulation. For each simulation we carried out a linear regression over the IBIs to obtain a slope value. Consistent with the methods in the human experiment to obtain the adjusted slope, the slope of each simulation in the control condition where $f_p(0)=f_a(0)=f_0$ was subtracted from the slope obtained in the experimental conditions ($f_p(0)=f_a(0)\neq f_0$). We averaged adjusted slopes across ASHLE models for each experimental initial frequency to obtain the plot in Fig~\ref{fig3}B. We also simulated how different ASHLE models with specific natural frequency values (with period lengths linearly spaced between 350ms and 650ms) would carry out this task when the initial conditions for $f_p(0)=f_a(0)$ were a period 45\% shorter ($f_p(0)=f_a(0)=\frac{1000\text{ms}}{0.55 \times \text{SMPms}}$), 30\% shorter ($f_p(0)=f_a(0)=\frac{1000\text{ms}}{0.70 \times \text{SMPms}}$), 15\% shorter ($f_p(0)=f_a(0)=\frac{1000\text{ms}}{0.85 \times \text{SMPms}}$), 15\% longer ($f_p(0)=f_a(0)=\frac{1000\text{ms}}{1.15 \times \text{SMPms}}$), 30\% longer ($f_p(0)=f_a(0)=\frac{1000\text{ms}}{1.3 \times \text{SMPms}}$), and 45\% longer ($f_p(0)=f_a(0)=\frac{1000\text{ms}}{1.45 \times \text{SMPms}}$) than ASHLE's period of natural frequency. Fig~\ref{fig3}C shows the results of these simulations, which are predictions of musician data that could be collected to test the accuracy of predictions made by ASHLE.
+
+\subsubsection*{Model optimization}
+
+Our goal was to use the ASHLE model to simulate the results in the musician data by Zamm and colleagues \cite{zamm2018musicians}. With the exception of $F = 0$ (due to the lack of stimulus), in this second experiment we used the same parameters used in experiment 1. We wanted to use the same parameter values in order to validate our model's behavior across two different sets of behavioral results. Hence, in all simulations in this second experiment $\alpha = 1$, $\beta = −1$, and $\gamma =  0.02$. Similarly, initial conditions for Eqs \eqref{eq:3.5} and \eqref{eq:3.7} were the same between experiment 1 and experiment 2. The only set of parameters that varied between simulations were the initial conditions for $f_p(0)=f_a(0)$ and the oscillators natural frequency ($f_0$).
+
+\subsection*{Experiment 3: Duet musical performance between musicians with matching or mismatching SMTs}
+
+\subsubsection*{Behavioral data for simulation}
+
+In another experiment, Zamm and colleagues \cite{zamm2016endogenous} measured the SMP of 40 musicians and formed duets of musicians in two experimental groups: duets with matching SMPs ($<$10ms IBI difference), and duets with mismatching SMPs ($>$110ms IBI difference). There were 10 unique musician duets in each experimental group. Musician pairs were instructed to perform a simple unfamiliar melody together (16 beats in length), repeating the melody four consecutive times (64 beats total). When pairs of musicians performed the task, they first heard four metronome beats (400ms IOI) that established the common tempo. Experimenters measured the absolute asynchrony between each pair of synchronizing musicians throughout the entire performance. Because the same melody was repeated four times, they obtained a mean absolute asynchrony for each of the melody repetitions. Fig~\ref{fig4}A shows the behavioral data reported by Zamm and colleagues (2016) with the average mean absolute asynchrony across musicians for each melody repetition and for each experimental group. Results showed that the mean absolute asynchrony between duets of musicians was larger when their SMPs did not match compared to when they matched.
+
+\subsubsection*{Setup, procedures and measurements}
+
+To obtain the musicians' SMPs, we overlaid a grid over figure 1 from the paper by Zamm and colleagues \cite{zamm2016endogenous}, which showed each musician's measured SMP (in their original paper, the authors mistakenly call the SMP as the `SPR'). Using the grid over the original figure allowed us to precisely recover each musician's SMP as reported in the original study. Because our model does not generate pitch, it only simulates the beats of the melody that musicians performed, not the individual notes. Using the musicians' SMP values, we simulated 20 pairs of ASHLE models (10 pairs with similar natural frequencies and 10 pairs with dissimilar natural frequencies) synchronizing during 64 cycles. All simulations shared the same parameter values and initial conditions used in experiment 1, except for the coupling strength between synchronizing ASHLE models (see model optimization in the next paragraph) and the natural frequency, which had a period that matched the SMP of a musician in the data by Zamm and colleagues \cite{zamm2016endogenous}. At the beginning of the simulation, two ASHLE models were stimulated by a complex-valued sinusoid $x(t)=\exp(i2\pi  f_s t)$ with an period of 400ms ($f_s = 2.5$). After these four cycles of sinusoidal stimulation, the stimulus stopped and the two ASHLE models stimulated each other with their respective $z_a$. That is, in each duet simulation, after four cycles of sinusoidal stimulation, the input to the ASHLE No.1 was $F_z z_{a_2}$ and the input to ASHLE No.2 was $F_z z_{a_1}$, where $F_z$ is the forcing strength between ASHLE models. After each simulation, we identified the location (in milliseconds) of local maxima in the real part of each ASHLE's effector $z_a$. Then, we measured the absolute asynchrony between the two synchronizing ASHLE model's $z_a$, obtaining 64 absolute asynchronies for each simulation. We divided these 64 absolute asynchronies in four subsections of equal parts (16 absolute asynchronies per section) to simulate the four melody repetitions that pairs of musicians carried out in the experiment by Zamm et al. \cite{zamm2016endogenous}, and we averaged the mean absolute asynchrony in each of these four subsections. We averaged the mean absolute asynchronies across pairs of ASHLE models for each melody repetition to obtain the plot in Fig~\ref{fig4}B. We also simulated how different ASHLE models (with natural frequency periods linearly spaced between 350ms and 650ms) would carry out this task when synchronizing for 16 cycles with another ASHLE model with an natural frequency period difference of -220ms, -110ms, -10ms, 10ms, 110ms, and 220ms. Fig~\ref{fig4}C shows the results of these simulations, which are predictions of data that could be collected to test the accuracy of predictions made by ASHLE.
+
+\subsubsection*{Model optimization}
+
+Our goal was to use the ASHLE model to simulate the results in the study by Zamm and colleagues \cite{zamm2016endogenous}. With the exception of the stimulus forcing $F$ and $F_z$, in this second experiment we used the same parameters used in experiment 1 and 2. Hence, in all simulations in this experiment $\alpha = 1$, $\beta = −1$, and $\gamma = 0.02$. Similarly, initial conditions for Eqs \eqref{eq:3.5} and \eqref{eq:3.7} were always $z_p(0)=z_a(0)=0.001 + i0$ and $f_p(0)=f_a(0)=f_0$ (matching the SMT by each musician in the duet study by Zamm and colleagues \cite{zamm2016endogenous}). In contrast with the previous two experiments, there were two kinds of stimulation in this third experiment. During the first four cycles of each simulation, similar to experiment 1, ASHLE was simulated by a sinusoid $x(t)=\exp(i2\pi f_s t)$ with a force $F = 1$ and $f_s=2.5$. However, during the next 64 cycles, two ASHLE models synchronized with each other, so the input to the first ASHLE model is the second ASHLE model's effector $F_z z_{a_2}$ and the input to the second ASHLE model was the first ASHLE model's effector $F_z z_{a_1}$. We found that using an $F_z = 1$ resulted in a lack of phase-locked synchronization between the two ASHLE, suggesting that $F_z = 1$ is too large and causes unstable dynamics between the two interacting ASHLE models. To improve stability, we reduced the value of $F_z$ until we observed stable synchronization between all pairs of ASHLE models that we want to simulate. We found that $F_z = 0.01$ resulted in stable synchronization, and mean absolute asynchronies matching the range of values in the behavioral data. However, we also noted that the mean absolute asynchrony was considerably smaller between pairs of ASHLE models with similari natural frequencies compared to the human results for musician duets with matching SMTs. We believe that this difference was due to the lack of noise in our model. To improve our simulation results, in each simulation we added gaussian noise to ASHLE's effector $z_a$ turning Eq \eqref{eq:3.7} into:
+
+\begin{equation}
+\frac{1}{f_a}\dot{z}_a = z_a \left( \alpha + i2\pi + \beta|z_a|^2 \right) + \exp(i \angle z_p) + \mathcal{N}(\mu, \sigma^2) \label{eq:3.9}
+\end{equation}
+
+where $\mu=0$ is the mean and $\sigma=10$ is the standard deviation of a normal distribution. Fig~\ref{fig4}B shows the results obtained after we added the noise, which better approximate the behavioral data.
 
 \section*{Acknowledgments}
-Cras egestas velit mauris, eu mollis turpis pellentesque sit amet. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nam id pretium nisi. Sed ac quam id nisi malesuada congue. Sed interdum aliquet augue, at pellentesque quam rhoncus vitae.
+The authors would like to thank Dr. Ji Chul Kim for his helpful comments on an earlier version of this article.
 
 \nolinenumbers
 
 % Either type in your references using
-% \begin{thebibliography}{}
+\begin{thebibliography}{10}
+
+\bibitem{ridderinkhof2014neurocognitive}
+Ridderinkhof KR.
+\newblock Neurocognitive mechanisms of perception--action coordination: A
+  review and theoretical integration.
+\newblock Neuroscience \& Biobehavioral Reviews. 2014;46:3--29.
+
+\bibitem{zamm2018musicians}
+Zamm A, Wang Y, Palmer C.
+\newblock Musicians' natural frequencies of performance display optimal
+  temporal stability.
+\newblock Journal of Biological Rhythms. 2018;33(4):432--440.
+
+\bibitem{mcauley2006time}
+McAuley JD, Jones MR, Holub S, Johnston HM, Miller NS.
+\newblock The time of our lives: life span development of timing and event
+  tracking.
+\newblock Journal of Experimental Psychology: General. 2006;135(3):348.
+
+\bibitem{zamm2016endogenous}
+Zamm A, Wellman C, Palmer C.
+\newblock Endogenous rhythms influence interpersonal synchrony.
+\newblock Journal of Experimental Psychology: Human Perception and Performance.
+  2016;42(5):611.
+
+\bibitem{scheurich2016spontaneous}
+Scheurich R, Zamm A, Bogetti C, Palmer C.
+\newblock Spontaneous Production Rates Are Consistent Across Tasks Varying in
+  Motor Complexity.
+\newblock In: CANADIAN JOURNAL OF EXPERIMENTAL PSYCHOLOGY-REVUE CANADIENNE DE
+  PSYCHOLOGIE EXPERIMENTALE. vol.~70. CANADIAN PSYCHOLOGICAL ASSOC 141 LAURIER
+  AVE WEST, STE 702, OTTAWA, ONTARIO~…; 2016. p. 402--402.
+
+\bibitem{drake2000tapping}
+Drake C, Penel A, Bigand E.
+\newblock Tapping in time with mechanically and expressively performed music.
+\newblock Music Perception. 2000;18(1):1--23.
+
+\bibitem{repp2005sensorimotor}
+Repp BH.
+\newblock Sensorimotor synchronization: a review of the tapping literature.
+\newblock Psychonomic bulletin \& review. 2005;12(6):969--992.
+
+\bibitem{repp2013sensorimotor}
+Repp BH, Su YH.
+\newblock Sensorimotor synchronization: a review of recent research
+  (2006--2012).
+\newblock Psychonomic bulletin \& review. 2013;20(3):403--452.
+
+\bibitem{mates1994temporal}
+Mates J, M{\"u}ller U, Radil T, P{\"o}ppel E.
+\newblock Temporal integration in sensorimotor synchronization.
+\newblock Journal of cognitive neuroscience. 1994;6(4):332--340.
+
+\bibitem{repp2003rate}
+Repp BH.
+\newblock Rate limits in sensorimotor synchronization with auditory and visual
+  sequences: The synchronization threshold and the benefits and costs of
+  interval subdivision.
+\newblock Journal of motor behavior. 2003;35(4):355--370.
+
+\bibitem{wohlschlager1999synchronization}
+Wohlschl{\"a}ger A.
+\newblock Synchronization error: An error in time perception.
+\newblock In: Abstracts of the Psychonomic Society. vol.~4; 1999. p.~48.
+
+\bibitem{repp2007tapping}
+Repp BH, Doggett R.
+\newblock Tapping to a very slow beat: a comparison of musicians and
+  nonmusicians.
+\newblock Music Perception. 2007;24(4):367--376.
+
+\bibitem{miyake2004two}
+Miyake Y, Onishi Y, Poppel E.
+\newblock Two types of anticipation in synchronization tapping.
+\newblock Acta neurobiologiae experimentalis. 2004;64(3):415--426.
+
+\bibitem{baaaath2016estimating}
+B{\aa}{\aa}th R.
+\newblock Estimating the distribution of sensorimotor synchronization data: A
+  Bayesian hierarchical modeling approach.
+\newblock Behavior research methods. 2016;48(2):463--474.
+
+\bibitem{scheurich2018tapping}
+Scheurich R, Zamm A, Palmer C.
+\newblock Tapping into rate flexibility: musical training facilitates
+  synchronization around spontaneous production rates.
+\newblock Frontiers in psychology. 2018;9:458.
+
+\bibitem{yu2003task}
+Yu H, Russell DM, Stenard D.
+\newblock Task-effector asymmetries in a rhythmic continuation task.
+\newblock Journal of Experimental Psychology: Human Perception and Performance.
+  2003;29(3):616.
+
+\bibitem{goodman2000advantages}
+Goodman L, Riley MA, Mitra S, Turvey M.
+\newblock Advantages of rhythmic movements at resonance: minimal active degrees
+  of freedom, minimal noise, and maximal predictability.
+\newblock Journal of motor behavior. 2000;32(1):3--8.
+
+\bibitem{latash1992virtual}
+Latash M.
+\newblock Virtual trajectories, joint stiffness, and changes in the limb
+  natural frequency during single-joint oscillatory movements.
+\newblock Neuroscience. 1992;49(1):209--220.
+
+\bibitem{wolpert2007probabilistic}
+Wolpert DM.
+\newblock Probabilistic models in human sensorimotor control.
+\newblock Human movement science. 2007;26(4):511--524.
+
+\bibitem{stepp2010strong}
+Stepp N, Turvey MT.
+\newblock On strong anticipation.
+\newblock Cognitive systems research. 2010;11(2):148--164.
+
+\bibitem{roman2019delayed}
+Roman IR, Washburn A, Large EW, Chafe C, Fujioka T.
+\newblock Delayed feedback embedded in perception-action coordination cycles
+  results in anticipation behavior during synchronized rhythmic action: A
+  dynamical systems approach.
+\newblock PLoS computational biology. 2019;15(10):e1007371.
+
+\bibitem{aschersleben2002temporal}
+Aschersleben G.
+\newblock Temporal control of movements in sensorimotor synchronization.
+\newblock Brain and cognition. 2002;48(1):66--79.
+
+\bibitem{loehr2009subdividing}
+Loehr JD, Palmer C.
+\newblock Subdividing the beat: Auditory and motor contributions to
+  synchronization.
+\newblock Music Perception. 2009;26(5):415--425.
+
+\bibitem{large2002tracking}
+Large EW, Fink P, Kelso SJ.
+\newblock Tracking simple and complex sequences.
+\newblock Psychological research. 2002;66(1):3--17.
+
+\bibitem{large2002perceiving}
+Large EW, Palmer C.
+\newblock Perceiving temporal regularity in music.
+\newblock Cognitive science. 2002;26(1):1--37.
+
+\bibitem{kim2015signal}
+Kim JC, Large EW.
+\newblock Signal processing in periodically forced gradient frequency neural
+  networks.
+\newblock Frontiers in computational neuroscience. 2015;9:152.
+
+\bibitem{kim2019mode}
+Kim JC, Large EW.
+\newblock Mode locking in periodically forced gradient frequency neural
+  networks.
+\newblock Physical Review E. 2019;99(2):022421.
+
+\bibitem{righetti2009adaptive}
+Righetti L, Buchli J, Ijspeert AJ.
+\newblock Adaptive frequency oscillators and applications.
+\newblock The Open Cybernetics \& Systemics Journal. 2009;3(1).
+
+\bibitem{strogatz1993coupled}
+SH S, I S.
+\newblock Coupled oscillators and biological synchronization.
+\newblock Scientific American. 1993;269(6):102--109.
+
+\bibitem{lambert2016adaptive}
+Lambert AJ, Weyde T, Armstrong N.
+\newblock Adaptive Frequency Neural Networks for Dynamic Pulse and Metre
+  Perception.
+\newblock In: ISMIR. Schloss Dagstuhl LZI,; 2016. p. 60--66.
+
+\bibitem{large2010canonical}
+Large EW, Almonte FV, Velasco MJ.
+\newblock A canonical model for gradient frequency neural networks.
+\newblock Physica D: Nonlinear Phenomena. 2010;239(12):905--911.
+
+\bibitem{large2015neural}
+Large EW, Herrera JA, Velasco MJ.
+\newblock Neural networks for beat perception in musical rhythm.
+\newblock Frontiers in systems neuroscience. 2015;9:159.
+
+\bibitem{patel2014evolutionary}
+Patel AD, Iversen JR.
+\newblock The evolutionary neuroscience of musical beat perception: the Action
+  Simulation for Auditory Prediction (ASAP) hypothesis.
+\newblock Frontiers in systems neuroscience. 2014;8:57.
+
+\bibitem{daly2014changes}
+Daly I, Hallowell J, Hwang F, Kirke A, Malik A, Roesch E, et~al.
+\newblock Changes in music tempo entrain movement related brain activity.
+\newblock In: 2014 36th Annual International Conference of the IEEE Engineering
+  in Medicine and Biology Society. IEEE; 2014. p. 4595--4598.
+
+\bibitem{grahn2009feeling}
+Grahn JA, Rowe JB.
+\newblock Feeling the beat: premotor and striatal interactions in musicians and
+  nonmusicians during beat perception.
+\newblock Journal of Neuroscience. 2009;29(23):7540--7548.
+
+\bibitem{grahn2013finding}
+Grahn JA, Rowe JB.
+\newblock Finding and feeling the musical beat: striatal dissociations between
+  detection and prediction of regularity.
+\newblock Cerebral cortex. 2013;23(4):913--921.
+
+\bibitem{von1937nature}
+Von~Holst E.
+\newblock On the nature of order in the central nervous system.
+\newblock The Collected Papers of Erich von Holst Vol 1, The Behavioral
+  Physiology of Animal and Man. 1937; p. 133--155.
+
+\bibitem{haken1985theoretical}
+Haken H, Kelso JS, Bunz H.
+\newblock A theoretical model of phase transitions in human hand movements.
+\newblock Biological cybernetics. 1985;51(5):347--356.
+
+\bibitem{kelso1997relative}
+Kelso J.
+\newblock Relative timing in brain and behavior: Some observations about the
+  generalized motor program and self-organized coordination dynamics.
+\newblock Human Movement Science. 1997;16(4):453--460.
+
+\bibitem{chen2008moving}
+Chen JL, Penhune VB, Zatorre RJ.
+\newblock Moving on time: brain network for auditory-motor synchronization is
+  modulated by rhythm complexity and musical training.
+\newblock Journal of cognitive neuroscience. 2008;20(2):226--239.
+
+\bibitem{fujioka2012internalized}
+Fujioka T, Trainor LJ, Large EW, Ross B.
+\newblock Internalized timing of isochronous sounds is represented in
+  neuromagnetic beta oscillations.
+\newblock Journal of Neuroscience. 2012;32(5):1791--1802.
+
+\bibitem{bose2019neuromechanistic}
+Bose A, Byrne {\'A}, Rinzel J.
+\newblock A neuromechanistic model for rhythmic beat generation.
+\newblock PLoS computational biology. 2019;15(5):e1006450.
+
+\bibitem{fine2009memory}
+Fine P, Bull S.
+\newblock Memory for tactus and musical tempo: The effects of expertise and
+  speed on keeping time.
+\newblock In: Proceedings of the International Symposium on Performance
+  Science; 2009.
+
+\bibitem{schultz2019roles}
+Schultz BG, Palmer C.
+\newblock The roles of musical expertise and sensory feedback in beat keeping
+  and joint action.
+\newblock Psychological research. 2019;83(3):419--431.
+
+\bibitem{large1999dynamics}
+Large EW, Jones MR.
+\newblock The dynamics of attending: How people track time-varying events.
+\newblock Psychological review. 1999;106(1):119.
+
+\bibitem{van2013adaptation}
+Van Der~Steen MC, Keller PE.
+\newblock The ADaptation and Anticipation Model (ADAM) of sensorimotor
+  synchronization.
+\newblock Frontiers in human neuroscience. 2013;7:253.
+
+\bibitem{righetti2006dynamic}
+Righetti L, Buchli J, Ijspeert AJ.
+\newblock Dynamic hebbian learning in adaptive frequency oscillators.
+\newblock Physica D: Nonlinear Phenomena. 2006;216(2):269--281.
+
+\bibitem{large1994resonance}
+Large EW, Kolen JF.
+\newblock Resonance and the perception of musical meter.
+\newblock Connection science. 1994;6(2-3):177--208.
+
+\bibitem{acebron1998adaptive}
+Acebr{\'o}n J, Spigler R.
+\newblock Adaptive frequency model for phase-frequency synchronization in large
+  populations of globally coupled nonlinear oscillators.
+\newblock Physical Review Letters. 1998;81(11):2229.
+
+\bibitem{borisyuk2001oscillatory}
+Borisyuk R, Denham M, Hoppensteadt F, Kazanovich Y, Vinogradova O.
+\newblock Oscillatory model of novelty detection.
+\newblock Network: Computation in neural systems. 2001;12(1):1--20.
+
+\bibitem{ermentrout1991adaptive}
+Ermentrout B.
+\newblock An adaptive model for synchrony in the firefly Pteroptyx malaccae.
+\newblock Journal of Mathematical Biology. 1991;29(6):571--585.
+
+\bibitem{nakanishi2003learning}
+Nakanishi J, Morimoto J, Endo G, Cheng G, Schaal S, Kawato M.
+\newblock Learning from demonstration and adaptation of biped locomotion with
+  dynamical movement primitives.
+\newblock In: Workshop on Robot Programming by Demonstration, IEEE/RSJ
+  International Conference on Intelligent Robots and Systems; 2003.
+
+\bibitem{nishii1999learning}
+Nishii J.
+\newblock Learning model for coupled neural oscillators.
+\newblock Network: Computation in neural systems. 1999;10(3):213--226.
+
+\bibitem{lerud2019canonical}
+Lerud KD, Kim JC, Almonte FV, Carney LH, Large EW.
+\newblock A canonical oscillator model of cochlear dynamics.
+\newblock Hearing research. 2019;380:100--107.
+
+\bibitem{tal2017neural}
+Tal I, Large EW, Rabinovitch E, Wei Y, Schroeder CE, Poeppel D, et~al.
+\newblock Neural entrainment to the beat: The ``missing-pulse" phenomenon.
+\newblock Journal of Neuroscience. 2017;37(26):6331--6341.
+
+\end{thebibliography}
+
+
 % \bibitem{}
 % Text
 % \end{thebibliography}
@@ -475,6 +870,6 @@ Cras egestas velit mauris, eu mollis turpis pellentesque sit amet. Interdum et m
 %\end{thebibliography}
 
 
-\bibliography{mybib}
+%\bibliography{mybib}
 \end{document}
 
